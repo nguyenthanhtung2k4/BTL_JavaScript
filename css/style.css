@@ -1,0 +1,110 @@
+*{
+     box-sizing: border-box;
+     padding: 0;
+     margin: 0;
+     font-family: "Poetsen One", sans-serif;
+}
+body{
+     height: 100vh;
+     background-color: url('../img/4.jpg');
+     background-position: center;
+     background-size: cover;
+}
+header{
+     position: fixed ;
+     top: 0;
+     left: 0;
+     width: 100%;
+     padding: 20px;
+}
+header,.navbar{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin: 0 auto;
+     max-width: 1200px;
+     
+}
+.navbar , .menu-links{
+     display: flex;
+     gap: 30%;
+}
+.menu-links{
+     list-style: none;
+     margin-left: 10%;
+}
+ .logo{
+     font-size: 2rem;
+     font-weight: 650;
+}
+.navbar{
+     font-size: 1.5rem;
+}
+/* .navbar ,.logo, span{
+     color:  #C06B3E;
+} */
+.navbar,a{
+     color: blue;
+     text-decoration: none;
+     transform:0.2s ease;
+
+}
+
+.navbar a:hover{
+     color: #C06B3E;
+}
+.hero-section{
+     color: #C06B3E;
+     display: flex;
+     align-items: center;
+     padding: 0 20px;
+}
+.hero-section{
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     padding: 0 20px;
+}
+.hero-section,.content{
+     color: #C06B3E;     
+     font-family: "Playfair Display", serif;
+     
+}
+.hero-section,.content,h1{
+     font-size: 3rem;
+     max-width: 600px;
+}
+.hero-section,.content,p{
+     font-weight: 300;
+     max-width: 600px;
+     margin-top: 15px ;
+
+}
+.hero-section,.content,button{
+     
+     outline: none;
+     border: none;
+     font-size: 1rem;
+     padding: 12px 30px;
+     border-radius: 6px;
+     cursor: pointer;
+     margin-top: 35px ;
+     font-weight: 500;
+}
+button{
+     background-color: #17141445;
+}
+.hero-section .content button:hover{
+     background:#C06B3E;
+     color: #fff;
+}
+@media screen and ( max-width: 850px){
+     .navbar .menu-links{
+          position: fixed;
+          left: 0;
+          top: 0;
+          width: ;
+          /*  phut thu */
+     }
+     
+}

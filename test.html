@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Ảnh</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    
+    .slider-container {
+        position: relative;
+        overflow: hidden;
+        margin: 20px auto;
+        width: 80%;
+    }
+    
+    .slider {
+        display:flex;
+        transition: transform 0.5s ease;
+    }
+    
+    .slide {
+        flex: 0 0 auto;
+        width: 100%;
+        height: 500px;
+        background-color: lightblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+    }
+    
+    button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    img{
+        background-size:cover ;
+        background-position: center;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+    }
+    span{
+        display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translateX(50%,50%);
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: aqua;
+    border-color: red;
+    
+    }
+    
+    #prev {
+        left: 10px;
+    }
+    
+    #next {
+        right: 10px;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+              <img src="./img/1.jpg" alt="">
+            </div>
+            <span>thanh tung texxt dang test</span>
+            <div class="slide">Slide 2
+              <img src="./img/2.jpg" alt="">
+            </div>
+            <div class="slide">Slide 3
+              <img src="./img/3.jpg" alt="">
+            </div>
+            <div class="slide">Slide 4
+              <img src="./img/4.jpg" alt="">
+            </div>
+            <div class="slide">Slide 5
+              <img src="./img/5.jpg" alt="">
+            </div>
+        </div>
+        <button id="prev">Prev</button>
+        <button id="next">Next</button>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let currentIndex = 0;
+        let interval;
+    
+        prevButton.addEventListener('click', function() {
+            currentIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
+            updateSlider();
+        });
+    
+        nextButton.addEventListener('click', function() {
+            currentIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
+            updateSlider();
+        });
+    
+        function updateSlider() {
+            const offset = -currentIndex * 100;
+            slider.style.transform = `translateX(${offset}%)`;
+        }
+    
+        function autoSlides() {
+            currentIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
+            updateSlider();
+        }
+    
+        // Bắt đầu auto slide mỗi 3 giây
+        interval = setInterval(autoSlides, 3000);
+    
+        // Dừng auto slide khi chuột hover vào slider container
+        slider.addEventListener('mouseenter', () => {
+            clearInterval(interval);
+        });
+    
+        // Tiếp tục auto slide khi chuột rời khỏi slider container
+        slider.addEventListener('mouseleave', () => {
+            interval = setInterval(autoSlides, 3000);
+        });
+    });
+    
+    
+    </script>
+</body>
+</html>
