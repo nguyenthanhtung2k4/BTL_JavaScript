@@ -5,35 +5,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<style>
+
+</style>
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <a href="#" class="logo">Coffee<span>.</span></a>
+<body> 
+    
+    <header id="home">
+    <div class="benner"></div>
+    <span id="close-menu-btn" class="fas fa-bars"></span>
+        <a href="#" class="logo">Coffee<span>.</span></a>
+        <nav class="navbar" id="navbar">
             <ul class="menu-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Review</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About</a></li>
+                <li><a class="menu-name" href="#">Home</a></li>
+                <li><a class="menu-name" href="#about">About</a></li>
+                <li><a class="menu-name" href="#">Products</a></li>
+                <li><a class="menu-name" href="#">Review</a></li>
+                <li><a class="menu-name" href="#">Contact</a></li>
+                <li><div class="icon">
+                    <!--<i class="fas fa-search"></i>-->
+                    <i id="iconSearch" class="fas fa-search"></i>
+                    <a href="#" class="menu-name"></a><i id="buy" class="fas fa-shopping-cart"></i></a>
+                    <a href="#" class="menu-name"></a><i id="user" class="fas fa-user-circle"></i></a>
+                </div>            
             </ul>
-       </nav>
+            <span id="menu-btn" class="fas fa-times"></span>
+        </nav>
+        <!-- <div class="tongSearch">
+            <input class="tongSearch input-search" type="search" placeholder="search...">
+        </div> -->
+
     </header>
+    <input class="tongSearch input-search" type="search" placeholder="search...">
+    <!--  Content coffeee -->
     <section class="hero-section">
         <div class="content">
             <h1>Welcome to Coffee.</h1>
-            <p>Bắt đầu với một cốc cà phề ngay nào!</p>
-            <button>Oder Coffee</button>
+            <p>Bắt đầu với một cốc cà phề ngay nào!</p><br>
+            <a id="oder"  href="#products">Oder Coffee</a>
+        </div>
+    </section>
+    <!-- Abouts -->
+    <section class="about" id="about">
+        <h1 id="H1">Abouts</h1>
+        <div class="about-tong">
+        <div class="about-img">
+            <img class="about img" src="./img/3.jpg" alt="img">
+        </div>
+        <div class="about-text">
+            <h1>Về chúng tôi</h1>
+            <p>Coffee. chúng tôi tin tưởng rằng tất cả mọi người trên thê giới đều có thể thưởng thức những tách cà phê tự nhiên thuần khiết, cũng giống như thuở sơ khai con người chỉ có thể trồng và chế biến cà phê một cách tự nhiên và hoàn toàn hữu cơ. Chính vì vậy chúng tôi đã đặt ra sứ mệnh cho riêng mình đó là "Mang cà phê hữu cơ Việt ra thế giới". Cà phê Plane được trồng tại núi Hàm Rồng - Gia Lai, ở độ cao 750m so với mặt nước biển, với khí hậu ôn hòa, thổ nhưỡng thích hợp và lý tưởng nhất để trồng cà phê. Plane là thương hiệu đầu tiên tại Việt Nam có nông trại cà phê đạt chuẩn hữu cơ USDA của Bộ Nông nghiệp Hoa Kỳ. Plane Café sử dụng nguồn nguyên liệu đáp ứng các bộ tiêu chuẩn quốc tế như 4C, UTZ, BRC, Japan Organic và EU Organic.</p>
+        </div>
+    </div>
+    </section>
+    <!-- Products -->
+    <section class="product" id="product">
+        <div class="sanpham-tong" id="sanpham-tong">
+            <div class="sp" id="sp1">
+                <img src="./img/products/sp1.jpg" alt="img">
+                <button class="buton-sp" id="buton-sp">Add to card</button>
+                <div class="sp-text">
+                    <h3>San pham la</h3>
+                    <i>$25</i>
+                    <i id="i">$35</i>
+                </div>
+            </div>
         </div>
     </section>
 </body>
 </html>
+<script src="./JavaScript/home.js"></script>
+<script>
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+        var benner = document.getElementsByClassName("benner")[0];
+        if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
+            benner.style.top = "0";
+        } else {
+            benner.style.top = "-100px";
+        }
+    }
+    
+    $(document).ready(function(){
+        $('#iconSearch').click(function(){
+            $('.input-search').slideToggle()
+        })
+    })
+        
+</script>

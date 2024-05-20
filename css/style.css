@@ -6,9 +6,23 @@
 }
 body{
      height: 100vh;
-     background-color: url('../img/4.jpg');
+     background-image: url('../bg.jpg');
      background-position: center;
      background-size: cover;
+     /* background-attachment: fixed; */
+     /* background-repeat: no-repeat; */
+     width: 100%;
+}
+.benner{
+     background-color: #0e0d12f4;
+     display: block;
+     position: fixed;
+     top:-100px;
+     left: 0;
+     width: 250%;
+     height: 100px;
+     z-index: -1;
+     transition: top 0.5s ease;
 }
 header{
      position: fixed ;
@@ -22,20 +36,24 @@ header,.navbar{
      justify-content: space-between;
      align-items: center;
      margin: 0 auto;
-     max-width: 1200px;
+     max-width: 1000px;
      
 }
 .navbar , .menu-links{
      display: flex;
      gap: 30%;
+     
+     
 }
+
 .menu-links{
      list-style: none;
-     margin-left: 10%;
+     margin-left: 20%;
 }
- .logo{
-     font-size: 2rem;
+.logo{
+     font-size: 3rem;
      font-weight: 650;
+     color: #C06B3E;
 }
 .navbar{
      font-size: 1.5rem;
@@ -44,14 +62,18 @@ header,.navbar{
      color:  #C06B3E;
 } */
 .navbar,a{
-     color: blue;
+     color: #ffffffdb;
      text-decoration: none;
-     transform:0.2s ease;
+     transition: 0.25 linear;
 
 }
 
-.navbar a:hover{
+.logo.navbar ,a:hover{
      color: #C06B3E;
+     /* transform: scale(1.5); */
+}
+.menu-links.menu-name:hover{
+     transform: scale(1.5);
 }
 .hero-section{
      color: #C06B3E;
@@ -80,7 +102,7 @@ header,.navbar{
      margin-top: 15px ;
 
 }
-.hero-section,.content,button{
+.hero-section,.content,#oder{
      
      outline: none;
      border: none;
@@ -91,20 +113,346 @@ header,.navbar{
      margin-top: 35px ;
      font-weight: 500;
 }
-button{
-     background-color: #17141445;
+#oder{
+     background-color: #fff;
+     height: 50px;
+     padding: 15px;
+     transition: 0.25s linear;
+     font-size: 20px;
 }
-.hero-section .content button:hover{
+.hero-section.content #oder:hover{
      background:#C06B3E;
      color: #fff;
 }
-@media screen and ( max-width: 850px){
-     .navbar .menu-links{
+#oder{
+     color: #ffffff89;
+     background-color: #C06B3E;
+}
+#oder:hover{
+     background-color: #fff;
+     color: #C06B3E;
+}
+#close-menu-btn{
+     display: none;
+     cursor: pointer;
+}
+#menu-btn{
+     display: none;
+     color: red;
+     cursor: pointer;
+}
+.icon{
+     display: flex;
+     gap: 10px;
+     transition: 0.25s linear;
+     cursor: pointer;
+     color: #fff;
+     
+}
+
+
+#buy:hover,#search:hover{
+     color: #C06B3E;
+     transform: scale(1.2);
+}
+#iconSearch:hover{
+     color: #C06B3E;
+     transform: scale(1.2);
+}
+#user{
+     font-size: 37px;
+     margin-top: -5px;
+}
+#user:hover{
+     color: #C06B3E;
+     transform: scale(1.2);
+}
+/* #oder:hover{
+     background-color: #C06B3E;
+} */
+/* SEARCH */
+.tongSearch{
+     color: #fff;
+     display: flex;
+     align-items: center;
+     margin-top: 20px;
+     width: 90%;
+     margin:  0 auto;
+     height: 200px;
+     /* border: 1px solid white; */
+}
+
+.input-search{
+     
+     display: none;
+     position: fixed;
+     /* top: 100%; */
+     left: 33%;
+     justify-content: center;
+     align-items: center;
+     width: 35%;
+     height: 30px;
+     padding: 25px;
+     border-radius: 20px;
+     font-size: 20px;
+     /* margin:  0 auto; */
+     margin-top: 100px;
+     color: black;
+     box-shadow: inset 0px 0px 7px 1px
+     
+}
+.top{
+     display: block;
+     background-color: antiquewhite;
+     width: 100%;
+     height: auto;
+}
+#H1{
+     color: #C06B3E;
+}
+.about{
+     display:inline-block ;
+     width: 100%;
+     height: auto;
+     background-color: #fff;
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+}
+.about-tong{
+     padding: 5px;
+     background-color: #fff;
+     display: flex;
+     float: left;
+     
+}
+.about-img{
+     width: 50%;
+     height: auto;
+     
+     /* border-radius: 0% 20%; */
+}
+.img{
+     width: 100%;
+     height: 100%;
+     border-radius: 0% 20%;
+     padding: 20px;
+     border: 3.5px solid black;
+     object-fit: cover;
+}
+.about-text{
+     padding-left: 20px;
+     margin-left: 50px;
+     width: 50%;
+     
+}
+.about-text p{
+     font-family: "Open Sans", sans-serif;
+     margin-left: 200px;
+     font-size: 22px;
+     font-weight: bold;
+     text-align: justify;
+     margin-top: 40px;
+}
+.about-text h1{
+     font-family: "Open Sans", sans-serif;
+
+}
+/* Products */
+.product{
+     width: 100%;
+     height: auto;
+     display: inline-block;
+     background-color: #fff;
+     padding: 30px;
+}
+.product-tong{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+.sp{
+     /* border: 2px solid black; */
+     width: 300px;
+     height: auto;
+     padding-left: 2px;
+     background-color: #d5d5d5;
+}
+
+.sp img{
+     width: 100%;
+     height: auto;
+     /* border: 3.5px solid black; */
+     object-fit: cover;
+}
+.sp i,h3{
+     font-size: 20px;
+     margin-left: 20px;
+}
+.sp-text{
+     width: 70%;
+     margin-left: 20px;
+     margin-top: 10px;
+     
+}
+.sp h3{
+     /* font-family: "Open Sans", sans-serif; */
+     /* font-family: "Open Sans", sans-serif; */
+     font-weight: bold;
+     font-size: 20px;
+     margin-left: 20px;
+     margin-bottom: 1px;
+}
+.sp i{
+     color: black;
+     font-family: "Open Sans", sans-serif;
+     font-size: 25px;
+     font-weight: bold;
+     /* border:1px solid #C06B3E; */
+     /* background-color: #C06B3E; */
+     padding: 4px 4px 0px 4px;
+     border-radius: 10px;
+     text-align: center;
+     justify-content: center;
+     margin-bottom: 10px;
+}
+#i{
+     color: rgba(123, 111, 111, 0.799);
+     font-size: 20px;
+     text-decoration:line-through;
+     /* font-weight: bold; */
+     /* border:1px solid #C06B3E; */
+     /* background-color: #C06B3E; */
+     padding: 4px 4px 0px 4px;
+     border-radius: 10px;
+     text-align: center;
+     justify-content: center;
+     margin-bottom: 10px;
+}
+.buton-sp{
+     /* display: inline-block; */
+     position: relative;
+     width: 100%;
+     height: 60px;
+     border: none;
+     background-color: #C06B3E;
+     color: white;
+     font-size: 20px;
+     font-weight: bold;
+     cursor: pointer;
+     display: block;
+}
+.sp:hover .buton-sp{
+     display: block;
+     color: bisque ;
+     transform: scaleY(2px);
+
+}
+@media screen and ( max-width: 1050px){
+
+     header.active{
+          content: "";
           position: fixed;
           left: 0;
           top: 0;
-          width: ;
-          /*  phut thu */
+          width: 100%;
+          height: 100%;
+          backdrop-filter: blur(5px);
+          transition: color 2s ease;
+          
      }
-     
+     #navbar{
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 260px;
+          height: 100%;
+          background-color: white;
+          transition: width 2s;
+          transition: color 2s ease;
+          z-index: 100;
+     }
+     .navbar::before{
+          content: "";
+          transition: width 2s ease;
+     }
+     #navbar.active{
+          display: block;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 260px;
+          height: 100%;
+          background-color: white;
+          transition: color 2s ease;
+          transition: width 2s;
+          z-index: 100;
+          backdrop-filter: blur(5px);
+
+     }
+     /* .menu-links{
+          display: none;
+     } */
+     #close-menu-btn{
+          cursor: pointer;
+          position: fixed;
+          display: block;
+          right: 5%;
+          top: 5%;
+          color: #fff;
+          font-size: 2rem;
+          transition:  left 0.25s ease;
+     }
+     #menu-btn{
+          cursor: pointer;
+          display: block;
+          transition:  left 0.25s ease;
+          position: fixed;
+          left: 75%;
+          color: black;
+          top: 5%;
+     }
+     .navbar .menu-links{
+          color: black;
+          display: inline-block;
+          position:absolute;
+          top: 100px;
+          transition: 0.25s linear;
+     }
+     .icon{
+          display: flex;
+          gap: 5px;
+          transition: 0.25s linear;
+          cursor: pointer;
+          color: black;
+     }
+     .menu-name{
+          color: black;
+          margin-top: 200px;
+     }
+     li{
+          display: block;
+          margin-top: 20px;
+     }
+     .logo{
+          position: fixed;
+          top: 5%;
+          margin:  0 auto;
+     }
+     .about-tong{
+          padding: 5px;
+          background-color: #fff;
+          display: inline-block;
+     }
+     .about-img{
+          width: 100%;
+          height: auto;
+     }
+     .about-text{
+          width: 95%;
+
+     }
+    
+
 }
