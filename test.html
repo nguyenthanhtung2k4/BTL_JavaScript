@@ -1,54 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    button {
-      width: 100px;
-      height: 50px;
-      background-color: red;
-    }
-    #S{
-      width: 0;
-      height: 100px;
-      background-color: red;
-      transition: width 0.5s ease-in-out;  /* Add a smooth transition effect */
-    }
-    input#search{
-      width: 0;
-      height: 50px;
-      background-color: blue;
-      transition: width 0.5s ease-in-out;  /* Add a smooth transition effect */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .slider{
+            display: flex;
+            transition: transform 0.3s ease;
+        }
+        .all-review{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .slide img{
+            border-radius: 50%;
+        }
+    </style>
 </head>
 <body>
-  <button><i id="iconSearch" class="fas fa-search"></i></button>
-
-  <button id="toggleSearch" class="fas fa-search">Search</button>
-  <div id="S">
-    <input id="search" type="search">
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $('#toggleSearch').click(function() {
-        var currentWidth = $('#search').width();
-        if (currentWidth > 0) {
-          $('#search').width(0);
-          $('#S').width(0);
-          $(this).text('Search');  /* Change button text to "Search" */
-        } else {
-          $('#search').width(200);
-          $('#S').width(200);
-          $(this).text('Close');   /* Change button text to "Close" */
-        }
-      });
-    });
-  </script>
+    <section class="review">
+        <div class="all-review">
+            <div class="slider">
+                <div class="slide">
+                    <img src="./img/review/avata1.png" alt="img">
+                    <i>Tien Bry</i>
+                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quos qui quo aliquid enim ex nobis libero animi, consectetur alias est eaque. Magnam laboriosam sequi eum consequuntur sapiente ratione dicta.</span>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

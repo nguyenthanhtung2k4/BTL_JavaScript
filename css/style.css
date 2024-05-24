@@ -30,6 +30,7 @@ header{
      left: 0;
      width: 100%;
      padding: 20px;
+     z-index: 100;
 }
 header,.navbar{
      display: flex;
@@ -272,11 +273,12 @@ header,.navbar{
      align-items: center;
 }
 .sp{
+     position: relative;
      /* border: 2px solid black; */
-     width: 300px;
+     width: 400px;
      height: auto;
      padding-left: 2px;
-     background-color: #d5d5d5;
+     background-color: #dedbdbdb;
 }
 
 .sp img{
@@ -288,6 +290,28 @@ header,.navbar{
 .sp i,h3{
      font-size: 20px;
      margin-left: 20px;
+}
+.ticket{
+     font-family: "Open Sans", sans-serif;
+     display: inline-block;
+     position:absolute;
+     top: 5px;
+     left: 0;
+     /* border: 1px solid red; */
+     border-radius: 1px;
+     color: red;
+     background-color: #c06c3ec0;
+     width: 15%;
+     height: auto;
+     padding: 10px;
+     transition: all 0.3s linear;
+     
+}
+.sp:hover .ticket{
+     display: block;
+     color:#fff;
+     background-color: #c06c3ec0;
+     border-radius: none;
 }
 .sp-text{
      width: 70%;
@@ -317,7 +341,7 @@ header,.navbar{
      margin-bottom: 10px;
 }
 #i{
-     color: rgba(123, 111, 111, 0.799);
+     color: rgb(86, 74, 74);
      font-size: 20px;
      text-decoration:line-through;
      /* font-weight: bold; */
@@ -329,25 +353,169 @@ header,.navbar{
      justify-content: center;
      margin-bottom: 10px;
 }
-.buton-sp{
-     /* display: inline-block; */
-     position: relative;
+
+/* products */
+.products{
+     margin-top:10px;
      width: 100%;
-     height: 60px;
-     border: none;
-     background-color: #C06B3E;
-     color: white;
-     font-size: 20px;
-     font-weight: bold;
-     cursor: pointer;
-     display: block;
-}
-.sp:hover .buton-sp{
-     display: block;
-     color: bisque ;
-     transform: scaleY(2px);
+     height: auto;
+     display: flex;
+     flex-direction: column;
+     background-color: #fff;
+     padding: 30px;   
+     justify-content: center;
+     align-items: center;
 
 }
+h1   {
+     font-size: 50px;
+     z-index: 10;
+     color: #C06B3E;
+     /* border: 2px solid black; */
+     width: 100%;
+     /* background-color: #C06B3E; */
+}
+.products-h1{
+     background-color: #fff;
+     display: block;
+     font-size: 30px;
+     justify-content: center;
+     padding-top: 50px;
+     text-align: center;
+}
+.hr{
+     width: 25%;
+     height: 2px;
+     background-color: #C06B3E;
+     margin: 0 auto;
+     margin-top: 30px;
+}
+.h1{
+     width: 25%;    
+     height: 2px;
+          /* background-color: #C06B3E; */
+     margin: 0 auto;
+     margin-top: 20px;
+     margin-bottom: 30px;
+     
+}
+.hr2{
+     width: 100%;
+     height: 2px;
+     background-color: black;
+     margin: 0 auto;
+     margin-top: 30px;
+}
+.products-span{
+     display: inline;
+     /* font size small */
+     font-size: 20px;
+     /* font weight bold */
+     /* font-weight: bold; */
+     /* color black */
+     color: #C06B3E;
+     /* border: 2px solid black; */
+     width: 100%;
+     justify-content: space-between;
+     align-items: center;
+}
+/* spham tong */
+
+.sanpham-tong{
+     z-index: 1;
+     display: flex;
+     /* flex-wrap: ; */
+     flex-wrap: wrap; /* Cho phép các phần tử con tràn qua hàng mới khi cần */
+     justify-content: center; /* Căn chỉnh các phần tử con theo chiều ngang */
+}
+.sp{
+     justify-content: center;
+     align-items: center;
+     display: block;
+     float: left;
+     left: 20px;
+     gap: 10%;
+     margin: 50px 25px 40px;
+}
+.buton-sp{
+     width: 100%;
+     height: 70px;
+     background-color: #c06c3e;
+     color: white;
+     border: none;
+     font-size: 20px;
+     font-weight: bold;
+     text-align: center;
+     /* border-radius: 10px; */
+     margin-top: 20px;
+     cursor: pointer;
+     position: absolute;
+     bottom: 70px;
+     left: 50%;
+     opacity: 0;
+     transform: translateX(-50%);
+     z-index: 100;
+     transition: bottom 0.5s ease;
+     
+}
+.sp:hover .buton-sp{
+     opacity: 1;
+     background-color: C06B3E;
+     bottom: 0px;
+     color: black;
+     font-weight: bold;
+}
+.buton-sp:hover .buton-sp{
+     color: antiquewhite;
+}
+.Pro{
+     display: inline-block  ;
+}
+.star{
+     display:flex;
+     width: 20px;
+     height: 20px;
+     /* background-color: #C06B3E; */
+     position: relative;
+     color:#C06B3E;
+     top: 83%;
+     right: 30%;
+}
+/* Review */
+
+.review{
+     width: 100%;
+     height: auto;
+     display: flex;
+     flex-direction: column;
+     background-color: #fff;
+     padding: 30px;   
+     justify-content: center;
+     align-items: center;
+}
+.slide-box{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+}
+.slide-box img{
+     width: 10%;
+     height: auto;
+     border-radius: 50%;
+}
+.slide-box h2{
+     font-size: 30px;
+     font-weight: bold;
+
+}
+.all-review{
+          display:flex;
+          transition: transform 0.5s ease;
+}
+
+
 @media screen and ( max-width: 1050px){
 
      header.active{
@@ -452,6 +620,10 @@ header,.navbar{
      .about-text{
           width: 95%;
 
+     }
+     .reviewSpan{
+          display: block;
+          margin-top: 20px;
      }
     
 
