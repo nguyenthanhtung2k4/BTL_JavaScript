@@ -6,39 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="tung" id="tung">1</div>
-    <div class="tung" id="tung">1</div>
-    <div class="tung" id="tung">3</div>
-    <div class="tung" id="tung">4</div>
-    <div class="test">1</div>
-    <div class="test">1</div>
-    <div class="test">1</div>
-
-    <svg width="400" height="200">
-        <g transform="translate(50,10)">
-            <rect class="bar" width="40" height="120" x="0" y="80"></rect>
-            <rect class="bar" width="40" height="90" x="50" y="110"></rect>
-            <rect class="bar" width="40" height="150" x="100" y="50"></rect>
-            <rect class="bar" width="40" height="60" x="150" y="140"></rect>
-            <rect class="bar" width="40" height="180" x="200" y="20"></rect>
-        </g>
-    </svg>
-    
+    <img src="./img/1.jpg" alt="img" id="tung">
+    <script src="./jquery/jquery-3.7.1.min.js"></script>
     <script>
-        var id=document.getElementById('tung').classList
-        var tung1=document.getElementsByClassName('tung')
-        console.log('tung :'+tung1[3].className)
-        id.add('id')
-        tung1[3].style.backgroundColor = '#717171';
-    </script>
-    <style>
-        .id{
-            background-color: aqua;
-        }
-        .test{
-            display: none;
-            background-color: blue;
-        }
-    </style>
+         thongtin='thong tin toi la thanh tung'
+         $(document).ready(function(){
+         $('#tung').mouseenter(function(){
+              $(this).attr("title",thongtin)
+         })})
+      </script>
 </body>
 </html>
