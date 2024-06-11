@@ -1,17 +1,11 @@
- cho  tat  cac cac js been home vao  1 file de  chay  cho  no  de dang hon
- 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/products.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/products.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
+    <title>PLASTIC POUCH</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
@@ -26,62 +20,159 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     
 </head>
 <body>
     <header id="home">
         <div class="benner"></div>
         <span id="close-menu-btn" class="fas fa-bars"></span>
-        <a href="#" class="logo">Coffee<span>.</span></a>
-        <nav class="navbar" id="navbar">
-            <ul class="menu-links">
-                <li><a class="menu-name" href="index.html#">Home</a></li>
-                <li><a class="menu-name" href="index.html#about">About</a></li>
-                <li><a class="menu-name" href="index.html#products">Products</a></li>
-                <li><a class="menu-name" href="index.html#review">Review</a></li>
-                <li><a class="menu-name" href="index.html#contact">Contact</a></li>
-                <li><div class="icon">
-                    <!--<i class="fas fa-search"></i>-->
-                    <a href="#product" id="iconSearch"  class="fas fa-search"></a>
-                    <!-- <i id="iconSearch" class="fas fa-search"></i> -->
-                    <a href="#" class="menu-name"></a><i id="buy" class="fas fa-shopping-cart"></i></a>
-                    <a href="#" class="menu-name"></a><i id="user" class="fas fa-user-circle"></i></a>
-                </div>      
-            </ul>
-            <span id="menu-btn" class="fas fa-times"></span>
-        </nav>
-        <!-- <div class="tongSearch">
-            <input class="tongSearch input-search" type="search" placeholder="search...">
-        </div> -->
+            <a href="index.html#" class="logo">Coffee<span>.</span></a>
+            <nav class="navbar" id="navbar">
+                <ul class="menu-links">
+                    <li><a class="menu-name" href="index.html#">Home</a></li>
+                    <li><a class="menu-name" href="index.html#about">About</a></li>
+                    <li><a class="menu-name" href="index.html#products">Products</a></li>
+                    <li><a class="menu-name" href="index.html#review">Review</a></li>
+                    <li><a class="menu-name" href="index.html#contact">Contact</a></li>
+                    <li><div class="icon">
+                        <!--<i class="fas fa-search"></i>-->
+                        <a href="index.html#product" id="iconSearch"  class="fas fa-search"></a>
+                        <!-- <i id="iconSearch" class="fas fa-search"></i> -->
+                        <a id="buy-a" href="ViewCart.html"><i id="buy" class="fas fa-shopping-cart"><i id="uploadCart">0</i></i>
+                            <br><div class="view-cart" id="view-cart">
+                                <p>tung</p>
+                            </div>
+                        </a>
+                        <a href="Account.html" class="menu-name"><i id="user" class="fas fa-user-circle"></i></a>
+                    </div>            
+                </ul>
+                <span id="menu-btn" class="fas fa-times"></span>
+            </nav>
+            <!-- <div class="tongSearch">
+                <input class="tongSearch input-search" type="search" placeholder="search...">
+            </div> -->
+            
+        </header>
     
-    </header>
     <section class="information">
         <div class="tong">
+            <!-- <div class="click-img">
+                <img src="./img/1.jpg" alt="">
+            </div>         -->
             <div class="colum img-all">
-                <img src="./img/products/sp1.jpg" alt="">
+                <!-- <img id="img-main main" src="./img/products/sp1.jpg" alt=""> -->
+                <img id="img-main" src="../img/products/sp4.jpg" alt="">
                 <div class="img-small">
-                    <img src="./img/products/sp1.jpg" alt="">
-                    <img src="./img/products/sp1.jpg" alt="">
-                    <img src="./img/products/sp1.jpg" alt="">
-
+                    <img src="../img/products/sp4.44.jpg" alt="">
+                    <img src="../img/products/sp4.jpg" alt="">
+                    <img src="../img/products/sp4.4.jpg" alt="">
                 </div>
+                <!-- jquery  onmoueter -->
+                <script src="../jquery/jquery-3.7.1.min.js"></script>
+                <script>
+                    $(document).ready(function(){
+                        var main=$('#img-main').attr('src')
+                        $('.img-small').find('img').eq(0).on({
+                            mouseenter: function(){
+                                var img=$(this).attr('src')
+                                $('#img-main').attr('src',img)
+                                //alert(img)
+                            },
+                            mouseleave:function(){
+                                $('#img-main').attr('src',main)
+                                //alert(0)
+                            }
+                        });
+                        $('.img-small').find('img').eq(1).on({
+                            mouseenter: function(){
+                                var img=$(this).attr('src')
+                                $('#img-main').attr('src',img)
+                                //alert(img)
+                            },
+                            mouseleave:function(){
+                                $('#img-main').attr('src',main)
+                                //alert(0)
+                            }
+                        });
+                        $('.img-small').find('img').eq(2).on({
+                            mouseenter: function(){
+                                var img=$(this).attr('src')
+                                $('#img-main').attr('src',img)
+                                //alert(img)
+                            },
+                            mouseleave:function(){
+                                $('#img-main').attr('src',main)
+                                //alert(0)
+                            }
+                        });
+                    })
+
+                </script>
             </div>
-            <div class="colum text-all">
-                <h2>paper cafe</h2>
-                <div class="star">
 
+            <div class="colum text-all">
+                <h2>PLASTIC POUCH</h2>
+                <div class="Star-spkhac">
                 </div>
-                <div id="gia">200$</div>
+                <div id="gia">$27</div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum beatae consectetur architecto delectus aperiam quasi officia? Molestias animi, debitis ea vel libero ducimus, doloribus aliquam laborum culpa, asperiores sed reprehenderit?</p>
                 <br><br>
                 <div class="soluong">
-                    <i class="min fas fa-minus"></i>
-                    <input type="number" value="1">
-                    <i class="max fas fa-plus"></i>
-                </div>
-                <button class="button">Add to Cart</button>
+                    <i class="min fas fa-minus" id="min" onclick="Nhap(false)"></i>
+                    <input id="number" type="number" value="1">
+                    <i class="max fas fa-plus" id="max" onclick="Nhap(true)"></i>
+                    <script>
+                        var ID=1;
+                        var add=JSON.parse(localStorage.getItem('addCart')) || [];
+                        var number=document.getElementById('number');
+                        var index=add.findIndex(i=>{
+                            return ID==i.id;
+                        })
+                        console.log(index)
+                        if(index<0){
+                            var data=document.querySelectorAll('.tong');
+                            data.forEach(item=>{
+                                var img=item.querySelector('img').getAttribute('src')
+                                var gia=item.querySelector('#gia').textContent;
+                                var name=item.querySelector('h2').textContent;
+                                var newArr={
+                                    user: 'viewProducts',
+                                    id:ID,
+                                    sl:1,
+                                    name:name,
+                                    gia:gia,
+                                    img:img,
+                                }
+                                add.push(newArr);
+                                localStorage.setItem('addCart',JSON.stringify(add))
+                                Nhap(bool); 
+                                uploadNhap(); 
+                            })
+                        }else{
+                            var SL=add[index].sl;
+                            number.value=SL;
+                            Nhap(bool);
+                            uploadNhap();
+                        }
+                        function Nhap(bool){
+                                if(bool==true){
+                                    add[index].sl+=1;
+                                    console.log(add[index].sl)
+                                }
+                                else{
+                                    add[index].sl-=1;
+                                    console.log(add[index].sl)
+                                }
+                                localStorage.setItem('addCart',JSON.stringify(add))
+                            }
+                            function linkView(){
+                                location.href='ViewCart.html';
+                            }
+                </script>
+                </div><br><br>
+                <button id="button-sp" class="button" onclick="addCart(1)">Add to Cart</button>
+                <button id="button-buy" class="button" onclick="linkView();">Buy Now</button>
                 <br><br><br><hr><br>
                 <p class="title-sp">ID:10003</p>
                 <p class="title-sp">Sản Phẩm: Coffee</p>
@@ -98,7 +189,7 @@
                 </div>
             </div>
         </div>
-        <script src="./jquery/jquery-3.7.1.min.js"></script>
+        <script src="../jquery/jquery-3.7.1.min.js"></script>
         <script>
             /*jqurey mxh-di  chuot hien thong tin*/
             $(document).ready(function(){
@@ -115,13 +206,30 @@
                     $(this).attr('title','Quay lai')
                 })
             })
+            // Them bot so  luong san pham
+            document.addEventListener("DOMContentLoaded",function(){
+                var min=document.getElementById('min');
+                var max=document.getElementById('max');
+                var number=document.getElementById('number');
+                var so=parseInt(number.value)
+                min.addEventListener('click',function(){
+                    so-=1;
+                    number.value=so;
+                    //alert(number.value)
+                })
+                max.addEventListener('click',function(){
+                    so+=1;
+                    number.value=so;
+                    //alert(number.value)
+                })
+            })
         </script>
     </section>
     <!-- Chatbox -->
     <div class="chatbox" id="chatbox">
         <p><i id="mess" class="mess fab fa-facebook-messenger" style="color: #3230d5;"></i></p>
         <!-- Jquery-Chatbox -->
-        <script src="./jquery/jquery-3.7.1.min.js"></script>
+        <script src="../jquery/jquery-3.7.1.min.js"></script>
         <script>
             /* title-messs*/ 
             $(document).ready(function(){
@@ -136,16 +244,20 @@
             /*Cuon  mess*/
             window.onscroll=function(){
                 var mess =document.getElementById('mess');
-                if (document.body.scrollTop >1 || document.documentElement.scrollTop >1) {
+                var back =document.getElementById('back');
+                if (document.body.scrollTop >=0 || document.documentElement.scrollTop >=0) {
                     mess.style.display = "block";
                 } else {
                     mess.style.display = "none";
                 }
-                if (document.body.scrollTop >2500 || document.documentElement.scrollTop >2500) {
+                if(document.body.scrollTop>1000 ||document.documentElement.scrollTop > 1000){
+                    back.style.display='block';
+                }else{
+                    back.style.display='none';
+                }
+                if (document.body.scrollTop >2000 || document.documentElement.scrollTop >2000) {
                     mess.style.display = "none";
                 }
-                
-                
             }
         </script>
 
@@ -177,7 +289,7 @@
             </div>
         <!-- Tong Feedback -->
             <div class="Feedback" id="Feedback">
-                <h3 class="sl-fb">0 Feedback</h3>
+                <h3 class="sl-fb">Feedback</h3>
             <!-- Star -->
                 <div class="Star">
                     <div class="ngoi-sao">
@@ -185,7 +297,7 @@
                         <i class="sao5 fas fa-star"></i>
                         <i class="sao5 fas fa-star"></i>
                         <i class="sao5 fas fa-star"></i>
-                        <i class="sao5 fas fa-star"></i>(0)
+                        <i class="sao5 fas fa-star"></i>(2)
                    </div>
                     <div class="ngoi-sao">
                         <i class="sao5 fas fa-star"></i>
@@ -218,7 +330,7 @@
                 </div>
             
             <!-- /* Node Bam binh chon + Node bam thong tin  */ -->
-                <script src="./jquery/jquery-3.7.1.min.js"></script>
+                <script src="../jquery/jquery-3.7.1.min.js"></script>
                 <script>
                     $(document).ready(function(){
                         
@@ -254,7 +366,7 @@
                     <div class="avata">
                         <div class="avata-img">
                             <img src="https://secure.gravatar.com/avatar/a3c4d88c6648438f6ab44c0f13260353?s=166&d=mm&r=g" alt="avata">
-                            <p class="name-avata">ThanhTung</p>
+                            <p class="name-avata">HuấnRose</p>
                         </div>
                         <div class="text-avata-feedback">
                             <div class="date">
@@ -275,7 +387,7 @@
                     <div class="avata">
                         <div class="avata-img">
                             <img src="https://secure.gravatar.com/avatar/a3c4d88c6648438f6ab44c0f13260353?s=166&d=mm&r=g" alt="avata">
-                            <p class="name-avata">ThanhTung</p>
+                            <p class="name-avata">TiếnBry</p>
                         </div>
                         <div class="text-avata-feedback">
                             <div class="date">
@@ -299,13 +411,16 @@
                         <span>Địa chỉ email của bạn sẽ không được công bố. Các trường bắt buộc được đánh dấu *</span>
                         <div class="your-star">
                             <i class="your-dg">Đánh giá Sản phẩm| </i>
-                            <i class="fas fa-star Star" id="check1" data-index="1"></i>
-                            <i class="fas fa-star Star" id="check2" data-index="2"></i>
-                            <i class="fas fa-star Star" id="check3" data-index="3"></i>
-                            <i class="fas fa-star Star" id="check4" data-index="4"></i>
-                            <i class="fas fa-star Star" id="check5" data-index="5"></i>
+                            <div id="Star">
+                                <i class="fas fa-star Star" id="check1" data-index="2"></i>
+                                <i class="fas fa-star Star" id="check2" data-index="3"></i>
+                                <i class="fas fa-star Star" id="check3" data-index="4"></i>
+                                <i class="fas fa-star Star" id="check4" data-index="5"></i>
+                                <i class="fas fa-star Star" id="check5" data-index="6"></i>
+
+                            </div>
                             <!-- Your-Star-Option -->
-                            <script src="./jquery/jquery-3.7.1.min.js"></script>
+                            <script src="../jquery/jquery-3.7.1.min.js"></script>
                             <script>
                                     $(document).ready(function() {
                                         $('.Star').on('click', function() {
@@ -345,11 +460,13 @@
     </div>
     <section class="spkhac" id="spkhac">
         <div class="sanpham-tong" id="sanpham-tong"></div>
-            <div class="Pro" data-id=2;>
+            <div class="Pro" data-id=2>
                 <div class="sp spham" id="sp1">
+                    <a href="../Products/1864Cafe.html">
                     <i class="ticket">SaLe</i>
-                    <img class="img-sp" src="./img/products/sp2.jpg" alt="img">
-                    <button class="buton-sp" id="buton-sp">Add to card</button>
+                    <img class="img-sp" src="../img/products/sp2.jpg" alt="img">
+                    </a>
+                    <button class="buton-sp" id="buton-sp" onclick="addCart(2)">Add to card</button>
                     <div class="sp-text">
                         <h3>Barista 1864 CaFe</h3>
                         <i id="gia">$30</i>
@@ -364,11 +481,12 @@
                 <i class="fas fa-star-half-alt"></i>
                 </div>
             </div>
-            <div class="Pro" data-id=3;>
+            <div class="Pro" data-id=3>
                 <div class="sp spham" id="sp1">
-                    <!-- <i class="ticket"></i> -->
-                    <img class="img-sp" src="./img/products/sp3.jpg" alt="img">
-                    <button class="buton-sp" id="buton-sp">Add to card</button>
+                    <a href="../Products/PriodCoffee.html">
+                        <img class="img-sp" src="../img/products/sp3.jpg" alt="img">
+                    </a>
+                    <button class="buton-sp" id="buton-sp" onclick="addCart(3)">Add to card</button>
                     <div class="sp-text">
                         <h3>Priod coffee</h3>
                         <i id="gia">$25</i>
@@ -383,11 +501,13 @@
                 <i class="far fa-star"></i>
                 </div>
             </div>
-            <div class="Pro" data-id=4;>
+            <div class="Pro" data-id=4>
                 <div class="sp spham" id="sp1">
+                    <a href="../Products/PlasticPouch.html">
                     <!-- <i class="ticket"></i> -->
-                    <img class="img-sp" src="./img/products/sp4.jpg" alt="img">
-                    <button class="buton-sp" id="buton-sp">Add to card</button>
+                    <img class="img-sp" src="../img/products/sp4.jpg" alt="img">
+                    </a>
+                    <button class="buton-sp" id="buton-sp" onclick="addCart(4)">Add to card</button>
                     <div class="sp-text">
                         <h3>PLASTIC POUCH</h3>
                         <i id="gia">$27</i>
@@ -402,11 +522,13 @@
                 <i class="far fa-star"></i>
                 </div>
             </div>
-            <div class="Pro" data-id=5;>
+            <div class="Pro" data-id=5>
                 <div class="sp spham" id="sp1">
+                    <a href="../Products/GroundCoffee.html">
                     <!-- <i class="ticket"></i> -->
-                    <img class="img-sp" src="./img/products/sp5.jpg" alt="img">
-                    <button class="buton-sp" id="buton-sp">Add to card</button>
+                    <img class="img-sp" src="../img/products/sp5.jpg" alt="img">
+                    </a>
+                    <button class="buton-sp" id="buton-sp" onclick="addCart(5)">Add to card</button>
                     <div class="sp-text">
                         <h3>GROUND COFFEE</h3>
                         <i id="gia">$75</i>
@@ -448,14 +570,14 @@
             <div class="colum nam">
                 <h2 id="Doitac" >Đối tác</h2>
                 <div class="col">
-                    <div class="item_dt"><img src="img/img-logo/partner-3-01.jpeg"></div>
-                    <div class="item_dt"><img src="img/img-logo/partner-3-02.jpeg"></div>
-                    <div class="item_dt"><img src="img/img-logo/partner-3-03.jpeg"></div>
-                    <div class="item_dt"><img src="img/img-logo/partner-3-04.jpeg"></div>
-                    <div class="item_dt"><img src="img/img-logo/partner-3-05.jpeg"></div>
-                    <div class="item_dt"><img src="img/img-logo/partner-3-06.jpeg"></div>
-                    <div class="item_dt"><img src="img/img-logo/partner-3-07.jpeg"></div>
-                    <div class="item_dt"><img src="img/img-logo/partner-3-08.jpeg"></div>
+                    <div class="item_dt"><img src="../img/img-logo/partner-3-01.jpeg"></div>
+                    <div class="item_dt"><img src="../img/img-logo/partner-3-02.jpeg"></div>
+                    <div class="item_dt"><img src="../img/img-logo/partner-3-03.jpeg"></div>
+                    <div class="item_dt"><img src="../img/img-logo/partner-3-04.jpeg"></div>
+                    <div class="item_dt"><img src="../img/img-logo/partner-3-05.jpeg"></div>
+                    <div class="item_dt"><img src="../img/img-logo/partner-3-06.jpeg"></div>
+                    <div class="item_dt"><img src="../img/img-logo/partner-3-07.jpeg"></div>
+                    <div class="item_dt"><img src="../img/img-logo/partner-3-08.jpeg"></div>
                </div>
             </div>
             <div class="colum nam DK">
@@ -466,8 +588,8 @@
             <div class="colum nam addrees">
                 <h2>Địa chỉ</h2>
                 <p><i class="fas fa-map-marker-alt fa-lg"></i>  Số 1 Phố Xốm - Phú Lãm - Hà Đông - Hà Nội</p>
-                <p><i class="fas fa-phone-alt fa-lg"></i> (024)335577799</p><br>
-                <p><i class="far fa-envelope fa-lg"></i>dnu@dainam.edu.vn</p><br><br>
+                <p><i class="fas fa-phone-alt fa-lg"></i> (+84)985332250</p><br>
+                <p><i class="far fa-envelope fa-lg"></i>tungnt.it2k4@gmail.com</p><br><br>
                 <a href="https://www.facebook.com/"><i class="mxh fab fa-facebook-square fa-lg"></i></a>
                 <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
                 <a href="https://www.instagram.com/"><i class="mxh fab fa-instagram fa-lg"></i></a>
@@ -476,33 +598,8 @@
             </div>
             <div class="colum nam"></div>
         </section>
-        <div class="copy">© 2024 ThanhTung</div>
-
-
-
-
-
-        
-
-    <!-- <script>
-        // Lấy thông tin sản phẩm từ localStorage
-        const product = JSON.parse(localStorage.getItem('sp'));
-        // Hiển thị thông tin sản phẩm
-        console.log(product.image)
-        var img1=product.image.replace('.jpg','.1.jpg')
-        var img2=product.image.replace('.jpg','.1.jpg')
-        var title=document.querySelector('title');
-        console.log(title.innerText=product.name)
-        document.getElementById('productName').innerText = product.name;
-        document.getElementById('productImage').src = product.img;
-        document.getElementById('productImage1').src = img1;
-        document.getElementById('productImage2').src = img2;
-        document.getElementById('productPrice').innerText = 'Price: $' + product.gia;
-
-        // Quay lại trang trước
-        function goBack() {
-            window.history.back();
-        }
-    </script> -->
+        <div class="copy">© 2024 | NguyenThanhTung | 1771020729</div>
 </body>
 </html>
+        <script src="../JavaScript/addCart.js"></script>
+        <script src="../JavaScript/home.js"></script>

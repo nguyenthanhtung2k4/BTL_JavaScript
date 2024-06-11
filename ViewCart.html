@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="stylesheet" href="./css/style.css">
+     <link rel="stylesheet" href="./css/ViewCart.css">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>ViewCart</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    
+</head>
+<body>
+    
+     <header id="home">
+          <div class="benner"></div>
+          <span id="close-menu-btn" class="fas fa-bars"></span>
+              <a href="index.html#" class="logo">Coffee<span>.</span></a>
+              <nav class="navbar" id="navbar">
+                  <ul class="menu-links">
+                      <li><a class="menu-name" href="index.html#">Home</a></li>
+                      <li><a class="menu-name" href="index.html#about">About</a></li>
+                      <li><a class="menu-name" href="index.html#products">Products</a></li>
+                      <li><a class="menu-name" href="index.html#review">Review</a></li>
+                      <li><a class="menu-name" href="index.html#contact">Contact</a></li>
+                      <li><div class="icon">
+                          <!--<i class="fas fa-search"></i>-->
+                          <a href="index.html#product" id="iconSearch"  class="fas fa-search"></a>
+                          <!-- <i id="iconSearch" class="fas fa-search"></i> -->
+                          <a id="buy-a" href="ViewCart.html"><i id="buy" class="fas fa-shopping-cart"><i id="uploadCart">0</i></i>
+                              <br><div class="view-cart" id="view-cart">
+                                  <p>tung</p>
+                              </div>
+                          </a>
+                          <a href="Account.html" class="menu-name"><i id="user" class="fas fa-user-circle"></i></a>
+                      </div>            
+                  </ul>
+                  <span id="menu-btn" class="fas fa-times"></span>
+              </nav>
+              <!-- <div class="tongSearch">
+                  <input class="tongSearch input-search" type="search" placeholder="search...">
+              </div> -->
+              
+     </header>
+     <!-- Products All -->
+     <section class="ProductsAll" id="ProductsAll">
+          <div class="All-sp-infor">
+               <div class="Products" id="Products">
+                    <div class="naProducts">
+                         <ul class="ulproducts">
+                              <li>ID</li>
+                              <li>Product</li>
+                              <li>Quanity</li>
+                              <li>Total</li>
+                         </ul>
+                    </div>
+                    <div class="AllProducts" id="AllProducts">
+                         <div id="NamePro" class="NamePro" data-id="1">
+                              <ul class="ulName">
+                                   <li>
+                                        <div class="id_img">
+                                             <i>ID:1</i>
+                                             <img src="./img/products/sp1.jpg" alt="img">
+                                        </div>
+                                   </li>
+                                   <li>Product <br>45$</li>
+                                   <li><div class="soluong" >
+                                        <i class="min fas fa-minus" id="min"></i>
+                                        <input id="number" class="number" type="number" value="1" min="0">
+                                        <i class="max fas fa-plus" id="max"></i>
+                                   </li>
+                                   <li id="dola">$0</li>
+                              </ul>
+                         </div>
+                    </div>
+                    <!--  tong tien $ -->
+                    <div class="total" id="total">
+                         <ul class="ulproducts">
+                              <li >Total  :<i id="MoneyTotal">$0</i></li>
+                              
+                    </div>
+                    
+               </div>
+               <div class="Infor" id="Infor">
+                    <div class="thanhtoan">
+                         <h2>Products Payment</h2>
+                         <label for="">UserName</label><br>
+                         <input id="userPay" type="text" required placeholder="UserName"><br>
+                         <label for="">Phone</label><br>
+                         <input id="numberPay" type="number" required placeholder="PhoneNumber"><br>
+                         <label for="">Address</label><br>
+                         <select name="Address" id="Address">
+                              <option value="HN">Hà Nội</option>
+                              <option value="HN">Hà Nam</option>
+                              <option value="HN">Hưng Yên</option>
+                              <option value="HN">Hải Phòng</option>
+                              <option value="HN">Hòa Bình</option>
+                              <option value="HN">Thái Bình</option>
+                              <option value="HN">Ninh Bình</option>
+                              <option value="HN">Thanh Hóa</option>
+                              <option value="HN">Huế</option>
+                              <option value="HN">Tp Hồ Chí Minh</option>
+                              <option value="HN">Đà Nẵng</option>
+                              <option value="HN">Cần Thơ</option>
+                              <option value="HN">Khác </option>
+                         </select><br>
+                         <label for="">Specific Address</label><br>
+                         <input id="addressPay" type="text" required placeholder="SpecificAddress"><br>
+                         <div class="methods">
+                              <label for="">Payment Methods</label>
+                              <input id="paypal" type="radio" id="radioId" name="radio"><i>PayPall</i>
+                              <input id="mb" type="radio" id="radioId" name="radio"><i>MbBank</i>
+                              <input id="vietcome" type="radio" id="radioId" name="radio"><i>VietComeBank</i>
+                         </div>
+                         <b></b><hr class="hr">
+                         <div class="allPay">
+                              <i class="pay" id="pay">$0</i>
+                              <input type="submit" value="Pay">
+                              </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+     <!-- Footer -->
+    <section class="footer" id="footer">
+     <hr class="hr-footer">
+     <div class="colum nam">
+         <h2>Coffee.</h2>
+         <p>Chất lượng thượng hạng</p>
+         <p>Nguyên chất 100%</p>
+         <p>Đa dạng phong phú</p>
+         <p>Giá cả hợp lý</p>
+         <p>Dịch vụ tận tâm</p>
+         <p>Bạn còn chần chờ gì mà không thử !</p>
+     </div>
+     <div class="colum nam we">
+         <h2>Về chúng tôi</h2>
+         <p><a href="#about">Về chúng tôi</a></p>
+         <p><a href="#product">Sản phẩm</a></p>
+         <p><a href="#review">Đánh giá</a></p>
+         <p><a href="#contact">Liên hệ</a><br></p>
+     </div>
+     <div class="colum nam">
+         <h2 id="Doitac" >Đối tác</h2>
+         <div class="col">
+             <div class="item_dt"><img src="img/img-logo/partner-3-01.jpeg"></div>
+             <div class="item_dt"><img src="img/img-logo/partner-3-02.jpeg"></div>
+             <div class="item_dt"><img src="img/img-logo/partner-3-03.jpeg"></div>
+             <div class="item_dt"><img src="img/img-logo/partner-3-04.jpeg"></div>
+             <div class="item_dt"><img src="img/img-logo/partner-3-05.jpeg"></div>
+             <div class="item_dt"><img src="img/img-logo/partner-3-06.jpeg"></div>
+             <div class="item_dt"><img src="img/img-logo/partner-3-07.jpeg"></div>
+             <div class="item_dt"><img src="img/img-logo/partner-3-08.jpeg"></div>
+        </div>
+     </div>
+     <div class="colum nam DK">
+         <h2>Điều khoản</h2>
+         <a href="#"><p>Điều khoản sử dụng</p></a>
+         <a href="#"><p>Chính sách bảo mật</p></a>
+     </div>
+     <div class="colum nam addrees">
+         <h2>Địa chỉ</h2>
+         <p><i class="fas fa-map-marker-alt fa-lg"></i>  Số 1 Phố Xốm - Phú Lãm - Hà Đông - Hà Nội</p>
+         <p><i class="fas fa-phone-alt fa-lg"></i> (+84)985332250</p><br>
+         <p><i class="far fa-envelope fa-lg"></i>tungnt.it2k4@gmail.com</p><br><br>
+         <a href="https://www.facebook.com/"><i class="mxh fab fa-facebook-square fa-lg"></i></a>
+         <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+         <a href="https://www.instagram.com/"><i class="mxh fab fa-instagram fa-lg"></i></a>
+         <a href="https://www.linkedin.com/"><i class=" mxh fab fa-linkedin fa-lg"></i></a>
+         <a href="https://www.tiktok.com/"><i class="maxh fab fa-tiktok fa-lg"></i></a>
+     </div>
+     <div class="colum nam"></div>
+ </section>
+ <div class="copy">© 2024 | NguyenThanhTung | 1771020729</div>
+
+
+</body>
+</html>
+<script src="./JavaScript/home.js"></script>
+<script src="./JavaScript/addCart.js"></script>

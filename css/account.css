@@ -1,0 +1,122 @@
+*{
+     box-sizing: border-box;
+     padding: 0;
+     margin: 0;
+}
+body{
+     color: rgb(0, 0, 0);
+     background-image:url('../img/4.jpg');
+     background-repeat: no-repeat;
+     background-size:cover;
+     background-attachment: fixed;
+}    
+.benner{
+     background-color: #0e0d12f4;
+     display: block;
+     position: fixed;
+     top:0px;
+     left: 0;
+     width: 250%;
+     height: 100px;
+     z-index: -1;
+     transition: top 0.5s ease;
+}
+.acc{
+     display: block;
+     margin-top: 200px;
+     width: 100%;
+     height: 500px;
+}
+.acc .Account{
+     display: flex;
+     justify-content: center;
+     /* flex-direction: column; */
+     flex-wrap: wrap;
+     padding: 20px;
+}
+.Account .logoacc,.textacc{
+     width: 30%;
+     height: auto;
+     display:  inline-block;
+     padding: 50px;
+}
+.fasacc{
+     position: relative;
+     font-size:200px;
+     color: rgb(14, 225, 200);
+}
+.logoacc{
+     /* display: flex; */
+     background-color:rgba(255, 255, 255, 0.366);
+     border-radius: 20px;
+     box-shadow:  1px 0px 1px;
+     border: 1px solid rgb(255, 255, 255);
+     width: 80%;height: auto;
+     justify-content: center;
+     align-items: center;
+}
+.logoimg,.thongtinacc{
+     display:flex;
+}
+.textimg{
+     margin-left: 50px;
+     padding: 10px;
+     margin-top: 10px;
+}
+.cart{
+     font-size: 25px;
+}
+.cartacc{
+     display: flex;
+     margin-right: 30px;
+     cursor: pointer;
+     transition: all 0.3s linear;
+}
+.cartacc:hover{
+     color: rgb(209, 137, 13);
+}
+.status{
+     display: flex;
+     margin-right: 30px;
+     transition: all 0.3s linear;
+     color: rgb(149, 255, 0);
+}
+.status:hover{
+     color: red;
+}
+.dangxuat{
+     width: 100%;
+     padding: 5px;
+     
+}
+.dangxuat button{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     padding: 10px;
+     width: 200px;
+     padding-left: 0px;
+     border-radius: 10px;
+     transition: all 0.3s linear;
+}
+.dangxuat button:hover{
+     color: white;
+     background-color: black;
+     padding: 20px;
+     font-size: 15px;
+     border-radius: 20px;
+}
+@media screen and ( max-width: 1500px){
+     .acc .Account{
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          flex-wrap: wrap;
+     }
+     .Account .logoacc,.textacc{
+          width: 90%;
+          height: auto;
+          display:  inline-block;
+     }
+}

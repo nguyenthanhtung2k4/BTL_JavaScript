@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/products.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    
+</head>
+<body>
+    <header id="home">
+        <div class="benner"></div>
+        <span id="close-menu-btn" class="fas fa-bars"></span>
+            <a href="../index.html#" class="logo">Coffee<span>.</span></a>
+            <nav class="navbar" id="navbar">
+                <ul class="menu-links">
+                    <li><a class="menu-name" href="../index.html#">Home</a></li>
+                    <li><a class="menu-name" href="../index.html#about">About</a></li>
+                    <li><a class="menu-name" href="../index.html#products">Products</a></li>
+                    <li><a class="menu-name" href="../index.html#review">Review</a></li>
+                    <li><a class="menu-name" href="../index.html#contact">Contact</a></li>
+                    <li><div class="icon">
+                        <!--<i class="fas fa-search"></i>-->
+                        <a href="../index.html#product" id="iconSearch"  class="fas fa-search"></a>
+                        <!-- <i id="iconSearch" class="fas fa-search"></i> -->
+                        <a id="buy-a" href="../ViewCart.html"><i id="buy" class="fas fa-shopping-cart"><i id="uploadCart">0</i></i>
+                            <br><div class="view-cart" id="view-cart">
+                                <p>tung</p>
+                            </div>
+                        </a>
+                        <a href="../Account.html" class="menu-name"><i id="user" class="fas fa-user-circle"></i></a>
+                    </div>            
+                </ul>
+                <span id="menu-btn" class="fas fa-times"></span>
+            </nav>
+            <!-- <div class="tongSearch">
+                <input class="tongSearch input-search" type="search" placeholder="search...">
+            </div> -->
+            
+        </header>
+    
+    <section class="information">
+        <div class="tong">
+            <!-- <div class="click-img">
+                <img src="./img/1.jpg" alt="">
+            </div>         -->
+            <div class="colum img-all">
+                <!-- <img id="img-main main" src="./img/products/sp1.jpg" alt=""> -->
+                <img id="img-main" src="./img/products/sp1.jpg" alt="">
+                <div class="img-small">
+                    <img src="./img/products/sp1.111.jpg" alt="">
+                    <img src="./img/products/sp1.1.jpg" alt="">
+                    <img src="./img/products/sp1.11.jpg" alt="">
+                </div>
+                <!-- jquery  onmoueter -->
+                <script src="./jquery/jquery-3.7.1.min.js"></script>
+                <script>
+                    $(document).ready(function(){
+                        var main=$('#img-main').attr('src')
+                        $('.img-small').find('img').eq(0).on({
+                            mouseenter: function(){
+                                var img=$(this).attr('src')
+                                $('#img-main').attr('src',img)
+                                //alert(img)
+                            },
+                            mouseleave:function(){
+                                $('#img-main').attr('src',main)
+                                //alert(0)
+                            }
+                        });
+                        $('.img-small').find('img').eq(1).on({
+                            mouseenter: function(){
+                                var img=$(this).attr('src')
+                                $('#img-main').attr('src',img)
+                                //alert(img)
+                            },
+                            mouseleave:function(){
+                                $('#img-main').attr('src',main)
+                                //alert(0)
+                            }
+                        });
+                        $('.img-small').find('img').eq(2).on({
+                            mouseenter: function(){
+                                var img=$(this).attr('src')
+                                $('#img-main').attr('src',img)
+                                //alert(img)
+                            },
+                            mouseleave:function(){
+                                $('#img-main').attr('src',main)
+                                //alert(0)
+                            }
+                        });
+                    })
+
+                </script>
+            </div>
+
+            <div class="colum text-all">
+                <h2>paper cafe</h2>
+                <div class="Star-spkhac">
+                </div>
+                <div id="gia">$25</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum beatae consectetur architecto delectus aperiam quasi officia? Molestias animi, debitis ea vel libero ducimus, doloribus aliquam laborum culpa, asperiores sed reprehenderit?</p>
+                <br><br>
+                <div class="soluong">
+                    <i class="min fas fa-minus" id="min" onclick="Nhap(false)"></i>
+                    <input id="number" type="number" value="1">
+                    <i class="max fas fa-plus" id="max" onclick="Nhap(true)"></i>
+                    <script>
+                        var ID=1;
+                        var add=JSON.parse(localStorage.getItem('addCart')) || [];
+                        var number=document.getElementById('number');
+                        var index=add.findIndex(i=>{
+                            return ID==i.id;
+                        })
+                        console.log(index)
+                        if(index<0){
+                            var data=document.querySelectorAll('.tong');
+                            data.forEach(item=>{
+                                var img=item.querySelector('img').getAttribute('src')
+                                var gia=item.querySelector('#gia').textContent;
+                                var name=item.querySelector('h2').textContent;
+                                var newArr={
+                                    user: 'viewProducts',
+                                    id:ID,
+                                    sl:1,
+                                    name:name,
+                                    gia:gia,
+                                    img:img,
+                                }
+                                add.push(newArr);
+                                localStorage.setItem('addCart',JSON.stringify(add))
+                                Nhap(bool); 
+                                uploadNhap(); 
+                            })
+                        }else{
+                            var SL=add[index].sl;
+                            number.value=SL;
+                            Nhap(bool);
+                            uploadNhap();
+                        }
+                        function Nhap(bool){
+                                if(bool==true){
+                                    add[index].sl+=1;
+                                    console.log(add[index].sl)
+                                }
+                                else{
+                                    add[index].sl-=1;
+                                    console.log(add[index].sl)
+                                }
+                                localStorage.setItem('addCart',JSON.stringify(add))
+                            }
+                            function linkView(){
+                                location.href='ViewCart.html';
+                            }
+                </script>
+                </div><br><br>
+                <button id="button-sp" class="button" onclick="addCart(1)">Add to Cart</button>
+                <button id="button-buy" class="button" onclick="linkView();">Buy Now</button>
+                <br><br><br><hr><br>
+                <p class="title-sp">ID:10003</p>
+                <p class="title-sp">Sản Phẩm: Coffee</p>
+                <p class="title-sp">Xuất Xứ: Italia</p>
+                <br><br>
+                <br><hr>
+                <div class="share">
+                    <a href=""><i class="share-mxh fas fa-share-square"></i></a>
+                    <a href="https://www.facebook.com"><i class="share-mxh fab fa-facebook-square"></i></a>
+                    <a href="https://x.com"><i class="share-mxh fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com"><i class="share-mxh fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/"><i class="share-mxh fab fa-linkedin-in"></i></a>
+                    <a href="https://www.tiktok.com/"><i class="share-mxh fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <script src="./jquery/jquery-3.7.1.min.js"></script>
+        <script>
+            /*jqurey mxh-di  chuot hien thong tin*/
+            $(document).ready(function(){
+                $('.share-mxh').mouseenter(function(){
+                    $(this).attr('title','Share')
+                })
+                $('.min').mouseenter(function(){
+                    $(this).attr('title','-1')
+                })
+                $('.max').mouseenter(function(){
+                    $(this).attr('title','+1')
+                })
+                $('.back').mouseenter(function(){
+                    $(this).attr('title','Quay lai')
+                })
+            })
+            // Them bot so  luong san pham
+            document.addEventListener("DOMContentLoaded",function(){
+                var min=document.getElementById('min');
+                var max=document.getElementById('max');
+                var number=document.getElementById('number');
+                var so=parseInt(number.value)
+                min.addEventListener('click',function(){
+                    so-=1;
+                    number.value=so;
+                    //alert(number.value)
+                })
+                max.addEventListener('click',function(){
+                    so+=1;
+                    number.value=so;
+                    //alert(number.value)
+                })
+            })
+        </script>
+    </section>
+    <!-- Chatbox -->
+    <div class="chatbox" id="chatbox">
+        <p><i id="mess" class="mess fab fa-facebook-messenger" style="color: #3230d5;"></i></p>
+        <!-- Jquery-Chatbox -->
+        <script src="./jquery/jquery-3.7.1.min.js"></script>
+        <script>
+            /* title-messs*/ 
+            $(document).ready(function(){
+                $('.mess').mouseenter(function(){
+                    $(this).attr('title','ChatBox')
+                })
+                $('.mess').click(function(){
+                    window.open('https://www.messenger.com', '_blank');
+                })
+                
+            })
+            /*Cuon  mess*/
+            window.onscroll=function(){
+                var mess =document.getElementById('mess');
+                var back =document.getElementById('back');
+                if (document.body.scrollTop >=0 || document.documentElement.scrollTop >=0) {
+                    mess.style.display = "block";
+                } else {
+                    mess.style.display = "none";
+                }
+                if(document.body.scrollTop>1000 ||document.documentElement.scrollTop > 1000){
+                    back.style.display='block';
+                }else{
+                    back.style.display='none';
+                }
+                if (document.body.scrollTop >2000 || document.documentElement.scrollTop >2000) {
+                    mess.style.display = "none";
+                }
+            }
+        </script>
+
+    </div>
+    <section class="infor-review" id="infor-review"><hr>
+        <div class="tong-review">
+            <div class="Node">
+                <button class="sp-Node" id="Node-thongtin" type="">Thông tin</button>
+                <button class="sp-Node BinhLuan" id="BinhLuan" type="">Bình Luận</button>
+            </div>
+            <div class="thongtin" id="thongtin">
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quos veniam modi voluptates sapiente facilis, illum quod enim minima voluptatem dolore eaque quidem ab pariatur recusandae quaerat quia. Dolor, neque.</span>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quos veniam modi voluptates sapiente facilis, illum quod enim minima voluptatem dolore eaque quidem ab pariatur recusandae quaerat quia. Dolor, neque.</span>
+                <span>Lorem ipsuzzm dolor sit amet, consectetur adipisicing elit. Perspiciatis quos veniam modi voluptates sapiente facilis, illum quod enim minima voluptatem dolore eaque quidem ab pariatur recusandae quaerat quia. Dolor, neque.</span>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis quos veniam modi voluptates sapiente facilis, illum quod enim minima voluptatem dolore eaque quidem ab pariatur recusandae quaerat quia. Dolor, neque.</span>
+                <table width="70%">
+                    <tr>
+                        <th>Kích thước</th>
+                        <th>Trọng lượng</th>
+                        <th>Xuất xứ</th>
+                    </tr>
+                    <tr>
+                        <th>3 × 60 × 80 in</th>
+                        <th>0.3kg</th>
+                        <th>Italia</th>
+                    </tr>
+                </table>
+                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora quisquam praesentium voluptatibus reiciendis iure vero provident molestiae est. Beatae vel quia praesentium ut magnam, animi iusto dolorem quaerat eos blanditiis.</span>
+            </div>
+        <!-- Tong Feedback -->
+            <div class="Feedback" id="Feedback">
+                <h3 class="sl-fb">Feedback</h3>
+            <!-- Star -->
+                <div class="Star">
+                    <div class="ngoi-sao">
+                        <i class="sao5 fas fa-star"></i>
+                        <i class="sao5 fas fa-star"></i>
+                        <i class="sao5 fas fa-star"></i>
+                        <i class="sao5 fas fa-star"></i>
+                        <i class="sao5 fas fa-star"></i>(2)
+                   </div>
+                    <div class="ngoi-sao">
+                        <i class="sao5 fas fa-star"></i>
+                        <i class="sao5 fas fa-star"></i>
+                        <i class="sao5 fas fa-star"></i>
+                        <i class="sao5 fas fa-star"></i>
+                        <i class="sao fas fa-star"></i>(0)
+                   </div>        
+                   <div class="ngoi-sao">
+                        <i class="sao5 fas fa-star"></i>
+                        <i class="sao5 fas fa-star"></i>
+                        <i class="sao5 fas fa-star"></i>
+                        <i class="sao fas fa-star"></i>
+                        <i class="sao fas fa-star"></i>(0)
+                    </div>
+                    <div class="ngoi-sao">
+                        <i class="sao5 fas fa-star"></i>
+                        <i class="sao5 fas fa-star"></i>
+                        <i class="sao fas fa-star"></i>
+                        <i class="sao fas fa-star"></i>
+                        <i class="sao fas fa-star"></i>(0)
+                    </div>
+                    <div class="ngoi-sao">
+                        <i class="sao5 fas fa-star"></i>
+                        <i class="sao fas fa-star"></i>
+                        <i class="sao fas fa-star"></i>
+                        <i class="sao fas fa-star"></i>
+                        <i class="sao fas fa-star"></i>(0)
+                    </div>            
+                </div>
+            
+            <!-- /* Node Bam binh chon + Node bam thong tin  */ -->
+                <script src="./jquery/jquery-3.7.1.min.js"></script>
+                <script>
+                    $(document).ready(function(){
+                        
+                        $('#Node-thongtin').click(function(){
+                            $('.thongtin').slideDown("slow")
+                            $('.Feedback').slideUp("slow")
+                            $('#Node-thongtin').css({
+                                'color': '#C7A17A',
+                                'border-bottom': '4px  solid #C7A17A',
+                            })
+                            $('#BinhLuan').css({
+                                'color': 'black',
+                                'border-bottom': '4px  solid black',
+                            })
+                        });
+                        $('#BinhLuan').click(function(){
+                            $('.Feedback').slideDown("slow")
+                            $('.thongtin').slideUp("slow")
+                            $('#BinhLuan').css({
+                                'color': '#C7A17A',
+                                'border-bottom': '4px  solid #C7A17A',
+                            })
+                            $('#Node-thongtin').css({
+                                'color': 'black',
+                                'border-bottom': '4px  solid black',
+                            })
+                        }); 
+                    })
+                </script>
+                <div class="feedback-text" id="feedback-text">
+                <!-- Avata -->
+                    <!-- feedback 1 -->
+                    <div class="avata">
+                        <div class="avata-img">
+                            <img src="https://secure.gravatar.com/avatar/a3c4d88c6648438f6ab44c0f13260353?s=166&d=mm&r=g" alt="avata">
+                            <p class="name-avata">HuấnRose</p>
+                        </div>
+                        <div class="text-avata-feedback">
+                            <div class="date">
+                                <p>1/6/2024</p>
+                            </div>
+                            <div class="ngoi-sao star-avata ">
+                                <i id="dg">Đánh Giá | </i>
+                                <i class="sao5 fas fa-star"></i>
+                                <i class="sao5 fas fa-star"></i>
+                                <i class="sao5 fas fa-star"></i>
+                                <i class="sao5 fas fa-star"></i>
+                                <i class="sao5 fas fa-star"></i>
+                        </div>
+                            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, excepturi? Nulla veritatis numquam omnis quos, optio facilis pariatur deserunt non, quaerat amet corrupti esse. Mollitia necessitatibus vel impedit exercitationem perspiciatis?</span>
+                        </div>
+                    </div>
+                        <!-- feedback 2 -->
+                    <div class="avata">
+                        <div class="avata-img">
+                            <img src="https://secure.gravatar.com/avatar/a3c4d88c6648438f6ab44c0f13260353?s=166&d=mm&r=g" alt="avata">
+                            <p class="name-avata">TiếnBry</p>
+                        </div>
+                        <div class="text-avata-feedback">
+                            <div class="date">
+                                <p>1/6/2024</p>
+                            </div>
+                            <div class="ngoi-sao star-avata ">
+                                <i id="dg">Đánh Giá | </i>
+                                <i class="sao5 fas fa-star"></i>
+                                <i class="sao5 fas fa-star"></i>
+                                <i class="sao5 fas fa-star"></i>
+                                <i class="sao5 fas fa-star"></i>
+                                <i class="sao5 fas fa-star"></i>
+                        </div>
+                            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, excepturi? Nulla veritatis numquam omnis quos, optio facilis pariatur deserunt non, quaerat amet corrupti esse. Mollitia necessitatibus vel impedit exercitationem perspiciatis?</span>
+                        </div>
+                    </div>
+                <!-- Your-FeedBack -->
+                    <div class="your-feedback" id="your-feedback">
+                        <hr>
+                        <h4>Thêm bài đánh giá của bạn</h4>
+                        <span>Địa chỉ email của bạn sẽ không được công bố. Các trường bắt buộc được đánh dấu *</span>
+                        <div class="your-star">
+                            <i class="your-dg">Đánh giá Sản phẩm| </i>
+                            <div id="Star">
+                                <i class="fas fa-star Star" id="check1" data-index="2"></i>
+                                <i class="fas fa-star Star" id="check2" data-index="3"></i>
+                                <i class="fas fa-star Star" id="check3" data-index="4"></i>
+                                <i class="fas fa-star Star" id="check4" data-index="5"></i>
+                                <i class="fas fa-star Star" id="check5" data-index="6"></i>
+
+                            </div>
+                            <!-- Your-Star-Option -->
+                            <script src="./jquery/jquery-3.7.1.min.js"></script>
+                            <script>
+                                    $(document).ready(function() {
+                                        $('.Star').on('click', function() {
+                                            var index = $(this).attr('data-index');
+                                            /*alert(index)*/
+                                            $('.Star').each(function(i) {
+                                                if (i <= index) {
+                                                    $(this).addClass('color-Star');
+                                                } else {
+                                                    $(this).removeClass('color-Star');
+                                                }
+                                            });
+                                        });
+                                        $('.your-dg').click(function(){
+                                            $('.Star').addClass('color-Star');
+                                        })
+                                    })
+                            </script>
+                        </div>
+                        <form action="" id="your-dg" class="your-dg">
+                            <textarea name="comment" id="comment" rows="12" cols="100" placeholder="">Nhận xét:
+                            </textarea>
+                            <div class="clos-input">
+                                <input type="text" placeholder="Tên của bạn*" required>
+                                <input type="email" placeholder="Email của bạn*" required>
+                            </div>
+                            <input type="submit" value="Bình luận ">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section><hr><br>
+    <!-- Sp tuong tu -->
+    <div class="titile-">
+        <h3>Các sản phẩm tương tự:</h3>
+    </div>
+    <section class="spkhac" id="spkhac">
+        <div class="sanpham-tong" id="sanpham-tong"></div>
+            <div class="Pro" data-id=2>
+                <div class="sp spham" id="sp1">
+                    <a href="##">
+                    <i class="ticket">SaLe</i>
+                    <img class="img-sp" src="./img/products/sp2.jpg" alt="img">
+                    </a>
+                    <button class="buton-sp" id="buton-sp" onclick="addCart(2)">Add to card</button>
+                    <div class="sp-text">
+                        <h3>Barista 1864 CaFe</h3>
+                        <i id="gia">$30</i>
+                        <i id="i">$35</i>
+                    </div>    
+                </div>
+                <div class="Star-spkhac">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="Pro" data-id=3>
+                <div class="sp spham" id="sp1">
+                    <a href="##">
+                        <img class="img-sp" src="./img/products/sp3.jpg" alt="img">
+                    </a>
+                    <button class="buton-sp" id="buton-sp" onclick="addCart(3)">Add to card</button>
+                    <div class="sp-text">
+                        <h3>Priod coffee</h3>
+                        <i id="gia">$25</i>
+                        <i id="i">$35</i>
+                    </div>    
+                </div>
+                <div class="Star-spkhac">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+                </div>
+            </div>
+            <div class="Pro" data-id=4>
+                <div class="sp spham" id="sp1">
+                    <a href="##">
+                    <!-- <i class="ticket"></i> -->
+                    <img class="img-sp" src="./img/products/sp4.jpg" alt="img">
+                    </a>
+                    <button class="buton-sp" id="buton-sp" onclick="addCart(4)">Add to card</button>
+                    <div class="sp-text">
+                        <h3>PLASTIC POUCH</h3>
+                        <i id="gia">$27</i>
+                        <i id="i">$35</i>
+                    </div>    
+                </div>
+                <div class="Star-spkhac">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+                </div>
+            </div>
+            <div class="Pro" data-id=5>
+                <div class="sp spham" id="sp1">
+                    <a href="##">
+                    <!-- <i class="ticket"></i> -->
+                    <img class="img-sp" src="./img/products/sp5.jpg" alt="img">
+                    </a>
+                    <button class="buton-sp" id="buton-sp" onclick="addCart(5)">Add to card</button>
+                    <div class="sp-text">
+                        <h3>GROUND COFFEE</h3>
+                        <i id="gia">$75</i>
+                        <i id="i">$80</i>
+                    </div>    
+                </div>
+                <div class="Star-spkhac">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Back -->
+    <div class="back" id="back"><a href="#"class="fas fa-arrow-up"></a></div>
+    <!-- Mesinger-->
+    <!-- Footer -->
+    <section class="footer" id="footer">
+            <hr class="hr-footer">
+            <div class="colum nam">
+                <h2>Coffee.</h2>
+                <p>Chất lượng thượng hạng</p>
+                <p>Nguyên chất 100%</p>
+                <p>Đa dạng phong phú</p>
+                <p>Giá cả hợp lý</p>
+                <p>Dịch vụ tận tâm</p>
+                <p>Bạn còn chần chờ gì mà không thử !</p>
+            </div>
+            <div class="colum nam we">
+                <h2>Về chúng tôi</h2>
+                <p><a href="#about">Về chúng tôi</a></p>
+                <p><a href="#product">Sản phẩm</a></p>
+                <p><a href="#review">Đánh giá</a></p>
+                <p><a href="#contact">Liên hệ</a><br></p>
+            </div>
+            <div class="colum nam">
+                <h2 id="Doitac" >Đối tác</h2>
+                <div class="col">
+                    <div class="item_dt"><img src="img/img-logo/partner-3-01.jpeg"></div>
+                    <div class="item_dt"><img src="img/img-logo/partner-3-02.jpeg"></div>
+                    <div class="item_dt"><img src="img/img-logo/partner-3-03.jpeg"></div>
+                    <div class="item_dt"><img src="img/img-logo/partner-3-04.jpeg"></div>
+                    <div class="item_dt"><img src="img/img-logo/partner-3-05.jpeg"></div>
+                    <div class="item_dt"><img src="img/img-logo/partner-3-06.jpeg"></div>
+                    <div class="item_dt"><img src="img/img-logo/partner-3-07.jpeg"></div>
+                    <div class="item_dt"><img src="img/img-logo/partner-3-08.jpeg"></div>
+               </div>
+            </div>
+            <div class="colum nam DK">
+                <h2>Điều khoản</h2>
+                <a href="#"><p>Điều khoản sử dụng</p></a>
+                <a href="#"><p>Chính sách bảo mật</p></a>
+            </div>
+            <div class="colum nam addrees">
+                <h2>Địa chỉ</h2>
+                <p><i class="fas fa-map-marker-alt fa-lg"></i>  Số 1 Phố Xốm - Phú Lãm - Hà Đông - Hà Nội</p>
+                <p><i class="fas fa-phone-alt fa-lg"></i> (+84)985332250</p><br>
+                <p><i class="far fa-envelope fa-lg"></i>tungnt.it2k4@gmail.com</p><br><br>
+                <a href="https://www.facebook.com/"><i class="mxh fab fa-facebook-square fa-lg"></i></a>
+                <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/"><i class="mxh fab fa-instagram fa-lg"></i></a>
+                <a href="https://www.linkedin.com/"><i class=" mxh fab fa-linkedin fa-lg"></i></a>
+                <a href="https://www.tiktok.com/"><i class="maxh fab fa-tiktok fa-lg"></i></a>
+            </div>
+            <div class="colum nam"></div>
+        </section>
+        <div class="copy">© 2024 | NguyenThanhTung | 1771020729</div>
+</body>
+</html>
+        <script src="./JavaScript/addCart.js"></script>
+        <script src="./JavaScript/home.js"></script>

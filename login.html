@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="stylesheet" href="./css/login.sign.css">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Login</title>
+</head>
+<body>
+     <div class="login">
+          <form action="#">
+               <h1>Login</h1>
+               <label for="">UserName</label><br>
+               <input type="text" placeholder="UserName" required><br>
+               <label for="">Password</label><br>
+               <input id="pass" type="password" placeholder="Password" required><br>
+               <label id="forget" for=""><a href="##">Forget Password</a><br></label>
+               <input type="submit" value="Login"><br>
+               <label id="sign" for=""><a href="signup.html">Sign Up</a><br></label>
+          </form>
+     </div>
+     
+</body>
+</html>
+<!-- // login  -->
+<script>
+     // tk login
+     let Login=JSON.parse(localStorage.getItem('login'))||[];
+     var user=document.querySelector('input[type="text"]');
+     var pass=document.getElementById('pass');
+     var submit=document.querySelector('input[type="submit"]');
+     
+     console.log(Login)
+     submit.addEventListener('click',()=>{
+          if(user.value.trim()==='' || pass.value.trim()===''){
+               alert('Vui lòng không để trống!')
+          }else{
+               let kq=0;
+               Login.forEach(i=>{
+                    if(user.value==i.name&& pass.value==i.password){
+                         var data={status:true,name:user.value,password:pass.value};
+                         localStorage.setItem('dataUser',JSON.stringify(data))
+                         alert('Đăng nhập thành công!')
+                         window.location.href='index.html'; 
+                         event.preventDefault();
+                         console.log(124)
+                         return kq=1;
+                         
+                    }
+               })
+               if(kq!=1){
+                    alert('Tài khoản không tồn tại\nHoặc sai User|Password')
+               }
+          }
+     })
+     var forget=document.getElementById('forget');
+     forget.addEventListener('click',()=>{
+          alert("Vui Lòng liên hệ với Admin để cấp lại mật khẩu mới nhé!")
+     })
+</script>

@@ -152,10 +152,32 @@ header,.navbar{
      color: #fff;
      
 }
-
-
+.view-cart{
+     display: none;
+     position: fixed;
+     top: 70px;
+     /* width: 270px; */
+     width: auto;
+     height: auto;
+     z-index: 100;
+     font-size: 15px;
+     font-family:"Open Sans", sans-serif;
+     color: #717171;
+     background-color: beige;
+     border: 1px solid #a59c9ca2;
+     border-radius: 5px 20px;
+     padding: 5px;
+     padding-left: 15px;
+     padding-bottom: 10px;
+}
+#buy i{
+     font-family:"Open Sans", sans-serif;
+     font-size: 20px;
+     /* color: red; */
+}
 #buy:hover,#search:hover{
      color: #C06B3E;
+     /* color: red; */
      transform: scale(1.2);
 }
 #iconSearch:hover{
@@ -322,7 +344,7 @@ header,.navbar{
      /* border: 1px solid red; */
      border-radius: 1px;
      color: red;
-     background-color: #c06c3ec0;
+     background-color: #d29b63;
      width: 15%;
      height: auto;
      padding: 10px;
@@ -348,7 +370,7 @@ header,.navbar{
      font-size: 20px;
      margin-left: 20px;
      margin-bottom: 1px;
-     color: #cc5c20;
+     color: #f17f0d;
 }
 .sp i{
      color: black;
@@ -460,10 +482,10 @@ h1   {
      gap: 10%;
      margin: 50px 25px 40px;
 }
-.buton-sp{
+.buton-sp {
      width: 100%;
      height: 70px;
-     background-color: #c06c3e;
+     background-color: #da8632;
      color: white;
      border: none;
      font-size: 20px;
@@ -480,6 +502,7 @@ h1   {
      transition: bottom 0.5s ease;
      
 }
+
 /* .active-sp{
      opacity: 1;
      z-index: 10;
@@ -500,12 +523,16 @@ h1   {
      z-index: 10;
      background-color: C06B3E;
      bottom: 0px;
-     color: black;
+     /* color: #cec8c8; */
      font-weight: bold;
      transition: bottom 0.25s ease;
 } 
 .buton-sp:hover .buton-sp{
-     color: antiquewhite;
+     color: black;
+}
+.buton-sp:hover{
+     color: black;
+     background-color:#cec8c8;
 }
 .Pro{
      display: inline-block  ;
@@ -517,7 +544,7 @@ h1   {
      /* background-color: #C06B3E; */
      position: relative;
      /* color:#C06B3E; */
-     color: rgba(227, 171, 15, 0.888);
+     color:#FF6F00;
      top: 83%;
      right: 30%;
 }
@@ -859,6 +886,7 @@ input[type=submit]:hover{
           color: black;
           top: 5%;
      }
+
      .navbar .menu-links{
           color: black;
           display: inline-block;
@@ -916,7 +944,7 @@ input[type=submit]:hover{
           border-radius: 50%;
           background-repeat: no-repeat;
  }
-     }
+     
      .colum{
           margin-bottom: 50px;
      }
