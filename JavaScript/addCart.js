@@ -187,6 +187,8 @@ document.addEventListener('DOMContentLoaded',function(){
                 alert('Vui lòng không để trống!')
             }else{
                 alert('Bạn đã đặt thành công!')
+                localStorage.removeItem('addCart');
+                location.reload();
             }
         }
     });

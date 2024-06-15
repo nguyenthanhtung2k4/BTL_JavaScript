@@ -16,10 +16,9 @@
                <input id="pass" type="password" placeholder="Password" required><br>
                <label id="forget" for=""><a href="##">Forget Password</a><br></label>
                <input type="submit" value="Login"><br>
-               <label id="sign" for=""><a href="signup.html">Sign Up</a><br></label>
+               <label id="sign" for=""><a href="sigup.html">Sign Up</a><br></label>
           </form>
      </div>
-     
 </body>
 </html>
 <!-- // login  -->
@@ -29,12 +28,14 @@
      var user=document.querySelector('input[type="text"]');
      var pass=document.getElementById('pass');
      var submit=document.querySelector('input[type="submit"]');
-     
-     console.log(Login)
      submit.addEventListener('click',()=>{
+          
           if(user.value.trim()==='' || pass.value.trim()===''){
                alert('Vui lòng không để trống!')
-          }else{
+          }else if(pass.value.length<8){
+               alert('Password <=8')
+          }
+          else{
                let kq=0;
                Login.forEach(i=>{
                     if(user.value==i.name&& pass.value==i.password){

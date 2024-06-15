@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="stylesheet" href="./css/login.sign.css">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>SignUp</title>
+</head>
+<body>
+     <div class="login">
+          <form action="login.html">
+               <h1>SignUp</h1>
+               <label for="">Email</label><br>
+               <input type="email" placeholder="Email" required><br>
+               <label for="">UserName</label><br>
+               <input type="text" placeholder="UserName" required><br>
+               <label for="">Password</label><br>
+               <input id="pass1" type="password" placeholder="Password" required><br>
+               <label for="">Enter Password</label><br>
+               <input id="pass2" type="password" placeholder="Password" required><br>               
+               <input type="submit" value="SignUp"><br>
+               <label id="sign" for=""><a href="login.html">Login Now</a><br></label>
+          </form>
+     </div>
+</body>
+</html>
+<script src="./jquery/jquery-3.7.1.min.js"></script>
+<script>
+      //Kiểm tra xem đúng định dạng email chưa
+function ConfirmEmail(emaill){
+    const kt = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return kt.test(emaill);
+}
+     document.addEventListener('DOMContentLoaded', () => {
+          var email=document.querySelector('input[type="email"]');
+          var pass1 = document.getElementById('pass1');
+          var pass2 = document.getElementById('pass2');
+          var user = document.querySelector('input[type="text"]');
+          var sub = document.querySelector('input[type="submit"]'); // Corrected selector
+          let login =JSON.parse(localStorage.getItem('login'))|| [];
+          
+          sub.addEventListener('click', () => {
+               console.log(login)
+               if(login.length>10){
+                    localStorage.removeItem('login')
+               }
+               if(user.value.trim()===''||pass1.value.trim()===''||pass2.value.trim()===''||email.value.trim()===''){
+                    alert("Vui lòng không để trống ô nhập")   
+               }
+               else if(!ConfirmEmail(email.value)){
+                    alert('Định dạng Email không hợp lệ!');
+                    //event.preventDefault();
+               }
+               else if(pass1.value.length<8|| pass2.value.length<8){
+                    alert("Password<8");
+                    event.preventDefault();     
+                    if(pass1.value!= pass2.value){
+                         alert('Vui lòng nhập khớp Password');
+                         event.preventDefault();
+                    }  
+               }else{
+                    var newLogin={
+                         email:email.value,
+                         name:user.value,
+                         password:pass1.value,
+                    }
+                    let login =JSON.parse(localStorage.getItem('login'))|| [];
+                    login.push(newLogin)
+                    console.log(login.length)
+                    console.log(login)
+                    if(login.lenth>10){
+                         console.log('Reset lai arr')
+                         localStorage.removeItem('login');
+                    }
+                    localStorage.setItem('login',JSON.stringify(login))
+                    alert('Tài khoản tồn tại!\nVui Lòng Đăng Nhập')
+                    window.location.href='login.html';  
+                    return;  
+               }
+          });
+     });
+</script>
