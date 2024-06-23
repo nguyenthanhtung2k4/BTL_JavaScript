@@ -42,8 +42,6 @@ input[type='text'],input[type='password'],input[type="email"]{
      font-size: 16px;
      height: 40px;
      outline: none;
-
-
 }
 .login label{
      margin-bottom: 10px;

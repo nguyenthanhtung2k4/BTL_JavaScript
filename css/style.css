@@ -9,7 +9,7 @@ body{
      background-image: url('../bg.jpg');
      background-position: center;
      background-size: cover;
-     /* background-attachment: fixed; */
+     background-attachment: fixed;
      /* background-repeat: no-repeat; */
      width: 100%;   
      transition: top 1s linear;
@@ -72,7 +72,7 @@ header,.navbar{
      color: #C06B3E;
      /* transform: scale(1.5); */
 }
-.menu-links.menu-name:hover{
+.menu-links.Menu-name:hover{
      transform: scale(1.5);
 }
 .hero-section{
@@ -900,7 +900,9 @@ input[type=submit]:hover{
      text-decoration: underline;
      color: #000000;
  }
-@media screen and ( max-width: 1050px){
+
+
+@media screen and ( max-width: 1280px){
 
      header.active{
           content: "";
@@ -928,6 +930,12 @@ input[type=submit]:hover{
      .navbar::before{
           content: "";
           transition: width 2s ease;
+     }
+     .navbar,a{
+          color: black;
+          text-decoration: none;
+          transition: 0.25 linear;
+     
      }
      #navbar.active{
           display: block;
@@ -980,7 +988,7 @@ input[type=submit]:hover{
           cursor: pointer;
           color: black;
      }
-     .menu-name{
+     .Menu-name{
           color: black;
           margin-top: 200px;
      }
@@ -1022,9 +1030,84 @@ input[type=submit]:hover{
           height: auto;
           border-radius: 50%;
           background-repeat: no-repeat;
- }
-     
+     }
      .colum{
           margin-bottom: 50px;
      }
+     .icon{
+          color: black;
+          display: flex;
+          width: auto;
+          height: 20px;
+     
+          /* background-color: #000000; */
+
+     }
+     .icon #iconSearch,.icon #buy,.icon #user{
+          color: black;
+     }
+     .icon #iconSearch:hover,.icon #buy:hover,.icon #user:hover{
+          color: #C06B3E;
+     }
+}
+
+@media screen and (max-width: 900px){
+     .logo{
+          position: fixed;
+          top: 3.5%;
+          margin:  0 auto;
+     }
+}
+@media screen and (max-width: 500px){
+     .logo{
+          position: fixed;
+          top: 3.5%;
+          margin:  0 auto;
+     }
+     .about{
+          display:inline-block ;
+          width: 100%;
+          height: auto;
+          background-color: #fff;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+     }
+     .about-text{
+          /* padding-left: 10px; */
+          margin-left: 5px;
+          width: 95%;
+          
+     }
+     .about-text p{
+          font-family: "Open Sans", sans-serif;
+          margin-left: 0px;
+          font-size: 20px;
+          font-weight: bold;
+          text-align: justify;
+          margin-top: 40px;
+          /* width: 100%; */
+     }
+     .about-text h1{
+          font-size: 35px;
+          font-family: "Open Sans", sans-serif;
+     
+     }
+     
+     .sp{
+          position: relative;
+          /* border: 2px solid black; */
+          width: 350px;
+          height: auto;
+          padding-left: 2px;
+          background-color: #dedbdbdb;
+     }
+     .product{
+          width: 100%;
+          height: auto;
+          display: inline-block;
+          background-color: #fff;
+          padding: 5px;
+     }
+
 }

@@ -447,3 +447,27 @@ input[type='submit']{
 
      }
 }
+@media screen and (max-width: 500px){
+     .text-all{
+          display:inline-block;
+          /* background-color: aqua; */
+          max-width: 500px ;
+          min-width: 200px;
+          /* margin-left: 150px; */
+     }
+     textarea{
+          padding: 50px;
+          /* font-family: "Open Sans", sans-serif; */
+          background-color: #F6F4EF;
+          border-radius: 10px;
+          /* color: #ff1313; */
+          border: none;
+          width: 95%;
+     }
+     .clos-input{
+          display: flex;
+          width: 100%;
+          padding: 20px;
+     }
+
+}
