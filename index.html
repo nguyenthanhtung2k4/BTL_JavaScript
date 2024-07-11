@@ -643,21 +643,20 @@
             var slider = document.querySelector('.slider');
             var dots   =document.querySelector('.dot-all')
             var slides = document.querySelectorAll('.slide');
-            var prevButton = document.getElementById('prev');
-            var nextButton = document.getElementById('next');
-            
-            let currentIndex = 0;
+            var leftButton = document.getElementById('prev');
+            var rightButton = document.getElementById('next');
+            let Index = 0;
             let interval;
-            prevButton.addEventListener('click', function() {
-                currentIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
+            leftButton.addEventListener('click', function() {
+                Index = Index === 0 ? slides.length - 1 : Index - 1;
                 updateSlider();
-                uploadDots(currentIndex)
+                uploadDots(Index)
             });
             
-            nextButton.addEventListener('click', function() {
-                currentIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
+            rightButton.addEventListener('click', function() {
+                Index = Index === slides.length - 1 ? 0 : Index + 1;
                 updateSlider();
-                uploadDots(currentIndex)
+                uploadDots(Index)
             });
             function uploadDots(index){
                 var dots=document.querySelectorAll('.dot')
@@ -668,23 +667,23 @@
             }
             
             function updateSlider() {
-                var offset = -currentIndex * 100;
+                var offset = -Index * 100;
                 slider.style.transform = `translateX(${offset}%)`;
             }
             
             function autoSlides() {
-                currentIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
+                Index = Index === slides.length - 1 ? 0 : Index + 1;
                 updateSlider();
-                uploadDots(currentIndex);
+                uploadDots(Index);
             }
-            // Bắt đầu auto slide mỗi 3 giây
+            // setime 3s
             interval = setInterval(autoSlides, 3000);
-            // Dừng auto slide khi chuột hover vào slider container
+            // dung auto
             slider.addEventListener('mouseenter', () => {
                 clearInterval(interval);
             });
             
-            // Tiếp tục auto slide khi chuột rời khỏi slider container
+            // tieptuc auto
             slider.addEventListener('mouseleave', () => {
                 interval = setInterval(autoSlides, 3000);
             });
@@ -704,13 +703,13 @@
                 /*var productParent =document.querySelector('.Pro');*/
                 if (productName.includes(search)) {
                     productParent.style.display = 'block';
-                    result += product.textContent + '<br>'; // Thêm tên sản phẩm vào kết quả tìm kiếm
+                    result += product.textContent + '<br>'; // tra ve 
                 } else {
                     productParent.style.display = 'none';
                 }
             });
     
-            tra.innerHTML = 'Kết quả tìm kiếm là:<br>' + result; // Cập nhật nội dung của phần tử div
+            tra.innerHTML = 'Kết quả tìm kiếm là:<br>' + result; // upldate tra ve
         });
     });
 </script>
