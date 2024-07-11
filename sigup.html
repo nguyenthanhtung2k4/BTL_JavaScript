@@ -39,12 +39,7 @@ function ConfirmEmail(emaill){
           var user = document.querySelector('input[type="text"]');
           var sub = document.querySelector('input[type="submit"]'); // Corrected selector
           let login =JSON.parse(localStorage.getItem('login'))|| [];
-          
           sub.addEventListener('click', () => {
-               console.log(login)
-               if(login.length>10){
-                    localStorage.removeItem('login')
-               }
                if(user.value.trim()===''||pass1.value.trim()===''||pass2.value.trim()===''||email.value.trim()===''){
                     alert("Vui lòng không để trống ô nhập")   
                }
@@ -65,14 +60,7 @@ function ConfirmEmail(emaill){
                          name:user.value,
                          password:pass1.value,
                     }
-                    let login =JSON.parse(localStorage.getItem('login'))|| [];
                     login.push(newLogin)
-                    console.log(login.length)
-                    console.log(login)
-                    if(login.lenth>10){
-                         console.log('Reset lai arr')
-                         localStorage.removeItem('login');
-                    }
                     localStorage.setItem('login',JSON.stringify(login))
                     alert('Tài khoản tồn tại!\nVui Lòng Đăng Nhập')
                     window.location.href='login.html';  

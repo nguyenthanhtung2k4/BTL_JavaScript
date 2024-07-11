@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList Example</title>
+    <style>
+        .oldClass {
+            color: red;
+        }
+        .newClass {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <p id="myParagraph" class="oldClass">Hello, world!</p>
+    <button onclick="replaceClass()">Replace Class</button>
+
+    <script>
+        function replaceClass() {
+            var paragraph = document.getElementById('myParagraph');
+            paragraph.replace('oldClass', 'newClass');
+        }
+    </script>
+</body>
+</html>

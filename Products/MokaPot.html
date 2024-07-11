@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <link rel="shourtcut icon" href="../icon.jpg">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/products.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/products.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
+    <title>Pot COFFEE</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
@@ -63,14 +63,14 @@
             </div>         -->
             <div class="colum img-all">
                 <!-- <img id="img-main main" src="./img/products/sp1.jpg" alt=""> -->
-                <img id="img-main" src="./img/products/sp1.jpg" alt="">
+                <img id="img-main" src="../img/products/sp8.jpg"  src2="./img/products/sp8.jpg" data-Id=8 alt="">
                 <div class="img-small">
-                    <img src="./img/products/sp1.111.jpg" alt="">
-                    <img src="./img/products/sp1.1.jpg" alt="">
-                    <img src="./img/products/sp1.11.jpg" alt="">
+                    <img src="../img/products/sp8.8.jpg" alt="">
+                    <img src="../img/products/sp8.jpg" alt="">
+                    <img src="../img/products/sp8.88.jpg" alt="">
                 </div>
                 <!-- jquery  onmoueter -->
-                <script src="./jquery/jquery-3.7.1.min.js"></script>
+                <script src="../jquery/jquery-3.7.1.min.js"></script>
                 <script>
                     $(document).ready(function(){
                         var main=$('#img-main').attr('src')
@@ -113,66 +113,18 @@
             </div>
 
             <div class="colum text-all">
-                <h2>paper cafe</h2>
+                <h2>Pot COFFEE</h2>
                 <div class="Star-spkhac">
                 </div>
-                <div id="gia">$25</div>
+                <div id="gia">$75</div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum beatae consectetur architecto delectus aperiam quasi officia? Molestias animi, debitis ea vel libero ducimus, doloribus aliquam laborum culpa, asperiores sed reprehenderit?</p>
                 <br><br>
                 <div class="soluong">
-                    <i class="min fas fa-minus" id="min" onclick="Nhap(false)"></i>
+                    <i class="min fas fa-minus" id="min" onclick="Nhap(-1)"></i>
                     <input id="number" type="number" value="1">
-                    <i class="max fas fa-plus" id="max" onclick="Nhap(true)"></i>
-                    <script>
-                        var ID=1;
-                        var add=JSON.parse(localStorage.getItem('addCart')) || [];
-                        var number=document.getElementById('number');
-                        var index=add.findIndex(i=>{
-                            return ID==i.id;
-                        })
-                        console.log(index)
-                        if(index<0){
-                            var data=document.querySelectorAll('.tong');
-                            data.forEach(item=>{
-                                var img=item.querySelector('img').getAttribute('src')
-                                var gia=item.querySelector('#gia').textContent;
-                                var name=item.querySelector('h2').textContent;
-                                var newArr={
-                                    user: 'viewProducts',
-                                    id:ID,
-                                    sl:1,
-                                    name:name,
-                                    gia:gia,
-                                    img:img,
-                                }
-                                add.push(newArr);
-                                localStorage.setItem('addCart',JSON.stringify(add))
-                                Nhap(bool); 
-                                uploadNhap(); 
-                            })
-                        }else{
-                            var SL=add[index].sl;
-                            number.value=SL;
-                            Nhap(bool);
-                            uploadNhap();
-                        }
-                        function Nhap(bool){
-                                if(bool==true){
-                                    add[index].sl+=1;
-                                    console.log(add[index].sl)
-                                }
-                                else{
-                                    add[index].sl-=1;
-                                    console.log(add[index].sl)
-                                }
-                                localStorage.setItem('addCart',JSON.stringify(add))
-                            }
-                            function linkView(){
-                                location.href='ViewCart.html';
-                            }
-                </script>
-                </div><br><br>
-                <button id="button-sp" class="button" onclick="addCart(1)">Add to Cart</button>
+                    <i class="max fas fa-plus" id="max" onclick="Nhap(1)"></i>
+                   </div><br><br>
+                <button id="button-sp" class="button" onclick="addCart(8)">Add to Cart</button>
                 <button id="button-buy" class="button" onclick="linkView();">Buy Now</button>
                 <br><br><br><hr><br>
                 <p class="title-sp">ID:10003</p>
@@ -190,7 +142,7 @@
                 </div>
             </div>
         </div>
-        <script src="./jquery/jquery-3.7.1.min.js"></script>
+        <script src="../jquery/jquery-3.7.1.min.js"></script>
         <script>
             /*jqurey mxh-di  chuot hien thong tin*/
             $(document).ready(function(){
@@ -230,7 +182,7 @@
     <div class="chatbox" id="chatbox">
         <p><i id="mess" class="mess fab fa-facebook-messenger" style="color: #3230d5;"></i></p>
         <!-- Jquery-Chatbox -->
-        <script src="./jquery/jquery-3.7.1.min.js"></script>
+        <script src="../jquery/jquery-3.7.1.min.js"></script>
         <script>
             /* title-messs*/ 
             $(document).ready(function(){
@@ -331,7 +283,7 @@
                 </div>
             
             <!-- /* Node Bam binh chon + Node bam thong tin  */ -->
-                <script src="./jquery/jquery-3.7.1.min.js"></script>
+                <script src="../jquery/jquery-3.7.1.min.js"></script>
                 <script>
                     $(document).ready(function(){
                         
@@ -421,7 +373,7 @@
 
                             </div>
                             <!-- Your-Star-Option -->
-                            <script src="./jquery/jquery-3.7.1.min.js"></script>
+                            <script src="../jquery/jquery-3.7.1.min.js"></script>
                             <script>
                                     $(document).ready(function() {
                                         $('.Star').on('click', function() {
@@ -463,9 +415,9 @@
         <div class="sanpham-tong" id="sanpham-tong"></div>
             <div class="Pro" data-id=2>
                 <div class="sp spham" id="sp1">
-                    <a href="##">
+                    <a href="../Products/1864Cafe.html">
                     <i class="ticket">SaLe</i>
-                    <img class="img-sp" src="./img/products/sp2.jpg" alt="img">
+                    <img class="img-sp" src="../img/products/sp2.jpg" alt="img">
                     </a>
                     <button class="buton-sp" id="buton-sp" onclick="addCart(2)">Add to card</button>
                     <div class="sp-text">
@@ -484,8 +436,8 @@
             </div>
             <div class="Pro" data-id=3>
                 <div class="sp spham" id="sp1">
-                    <a href="##">
-                        <img class="img-sp" src="./img/products/sp3.jpg" alt="img">
+                    <a href="../Products/PriodCoffee.html">
+                        <img class="img-sp" src="../img/products/sp3.jpg" alt="img">
                     </a>
                     <button class="buton-sp" id="buton-sp" onclick="addCart(3)">Add to card</button>
                     <div class="sp-text">
@@ -504,9 +456,9 @@
             </div>
             <div class="Pro" data-id=4>
                 <div class="sp spham" id="sp1">
-                    <a href="##">
+                    <a href="../Products/PlasticPouch.html">
                     <!-- <i class="ticket"></i> -->
-                    <img class="img-sp" src="./img/products/sp4.jpg" alt="img">
+                    <img class="img-sp" src="../img/products/sp4.jpg" alt="img">
                     </a>
                     <button class="buton-sp" id="buton-sp" onclick="addCart(4)">Add to card</button>
                     <div class="sp-text">
@@ -525,9 +477,9 @@
             </div>
             <div class="Pro" data-id=5>
                 <div class="sp spham" id="sp1">
-                    <a href="##">
+                    <a href="../Products/GroundCoffee.html">
                     <!-- <i class="ticket"></i> -->
-                    <img class="img-sp" src="./img/products/sp5.jpg" alt="img">
+                    <img class="img-sp" src="../img/products/sp5.jpg" alt="img">
                     </a>
                     <button class="buton-sp" id="buton-sp" onclick="addCart(5)">Add to card</button>
                     <div class="sp-text">
@@ -571,14 +523,14 @@
             <div class="colum nam">
                 <h2 id="Doitac" >Đối tác</h2>
                 <div class="col">
-                    <div class="item_dt"><img src="img/img-logo/partner-3-01.jpeg"></div>
-                    <div class="item_dt"><img src="img/img-logo/partner-3-02.jpeg"></div>
-                    <div class="item_dt"><img src="img/img-logo/partner-3-03.jpeg"></div>
-                    <div class="item_dt"><img src="img/img-logo/partner-3-04.jpeg"></div>
-                    <div class="item_dt"><img src="img/img-logo/partner-3-05.jpeg"></div>
-                    <div class="item_dt"><img src="img/img-logo/partner-3-06.jpeg"></div>
-                    <div class="item_dt"><img src="img/img-logo/partner-3-07.jpeg"></div>
-                    <div class="item_dt"><img src="img/img-logo/partner-3-08.jpeg"></div>
+                    <div class="item_dt"><img src="../img/img-logo/partner-3-01.jpeg"></div>
+                    <div class="item_dt"><img src="../img/img-logo/partner-3-02.jpeg"></div>
+                    <div class="item_dt"><img src="../img/img-logo/partner-3-03.jpeg"></div>
+                    <div class="item_dt"><img src="../img/img-logo/partner-3-04.jpeg"></div>
+                    <div class="item_dt"><img src="../img/img-logo/partner-3-05.jpeg"></div>
+                    <div class="item_dt"><img src="../img/img-logo/partner-3-06.jpeg"></div>
+                    <div class="item_dt"><img src="../img/img-logo/partner-3-07.jpeg"></div>
+                    <div class="item_dt"><img src="../img/img-logo/partner-3-08.jpeg"></div>
                </div>
             </div>
             <div class="colum nam DK">
@@ -602,5 +554,6 @@
         <div class="copy">© 2024 | NguyenThanhTung | 1771020729</div>
 </body>
 </html>
-        <script src="./JavaScript/addCart.js"></script>
-        <script src="./JavaScript/home.js"></script>
+<script src="../JavaScript/products.js"></script>
+        <script src="../JavaScript/addCart.js"></script>
+        <script src="../JavaScript/home.js"></script>

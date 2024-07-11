@@ -32,7 +32,7 @@
           <a href="#" class="logo">Haha</a>
               <nav class="navbar" id="navbar">
                   <ul class="menu-links">
-                      <li><a class="menu-name" href="index.html#">Home</a></li>
+                      <li><a class="menu-name" href="index.html">Home</a></li>
                       <li><a class="menu-name" href="index.html#about">About</a></li>
                       <li><a class="menu-name" href="index.html#products">Products</a></li>
                       <li><a class="menu-name" href="index.html#review">Review</a></li>
@@ -84,13 +84,15 @@
                                         <i class="max fas fa-plus" id="max"></i>
                                    </li>
                                    <li id="dola">$0</li>
-                              </ul>
+                              
                          </div>
                     </div>
                     <!--  tong tien $ -->
                     <div class="total" id="total">
                          <ul class="ulproducts">
-                              <li >Total  :<i id="MoneyTotal">$0</i></li>
+                              <li >Total  :<i id="MoneyTotal">$0</i>
+                                  <br><input id="buttonAll" type="button" value="DeleteAll">
+                              </li>
                               
                     </div>
                     
@@ -189,6 +191,29 @@
 
 
 </body>
-</html>
-<script src="./JavaScript/home.js"></script>
+<!-- </html>
+<script>
+// upload  gio  hang
+     function uploadCart(){
+          let soluong=0;
+          add.forEach(slCart=>{
+               soluong+=slCart.sl;
+          })
+          document.querySelector('#uploadCart').innerText=soluong;
+     }
+     uploadCart()
+// Nhap() ||  Cap nhap  min  max  addCart[index].sl
+function Nhap(value){
+     if(value>0){
+         add[index].sl+=1;
+     }
+     else if(value<0 && add[index].sl >1 && number.value>1){
+             add[index].sl-=1;
+     }
+     number. value=add[index].sl;
+     uploadCart();
+     localStorage.setItem('addCart',JSON.stringify(add))
+}</script> -->
+<script src="./jquery/jquery-3.7.1.min.js"></script>
 <script src="./JavaScript/addCart.js"></script>
+<script src="./JavaScript/home.js"></script>

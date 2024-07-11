@@ -30,7 +30,7 @@
      var pass=document.getElementById('pass');
      var submit=document.querySelector('input[type="submit"]');
      submit.addEventListener('click',()=>{
-          
+
           if(user.value.trim()==='' || pass.value.trim()===''){
                alert('Vui lòng không để trống!')
           }else if(pass.value.length<8){
@@ -38,6 +38,15 @@
           }
           else{
                let kq=0;
+               if(user.value=="admin"&& pass.value=="admin2004"){
+                    var data={status:true,name:user.value,password:pass.value};
+                         localStorage.setItem('dataUser',JSON.stringify(data))
+                         alert('Đăng nhập thành công!')
+                         window.location.href='index.html'; 
+                         event.preventDefault();
+                         console.log(124)
+                         return kq=1;
+               }
                Login.forEach(i=>{
                     if(user.value==i.name&& pass.value==i.password){
                          var data={status:true,name:user.value,password:pass.value};
@@ -56,6 +65,23 @@
      })
      var forget=document.getElementById('forget');
      forget.addEventListener('click',()=>{
-          alert("Vui Lòng liên hệ với Admin để cấp lại mật khẩu mới nhé!")
+          var SDT=(prompt("Vui Lòng để lại SDT"));
+          console.log(SDT.length);
+          if(SDT.length==10){
+               alert('Mật khẩu mới sẽ được gửi về số: '+SDT);
+          }else if(SDT.length<10){
+               alert("SĐT không hợp lệ!");
+          }else{
+               alert('Vui lòng nhập đúng định dạng số điện thoại!')
+          }
+     })
+     // singup
+     var sign=document.getElementById('sign');
+     sign.addEventListener('click', function(){
+          let Login =JSON.parse(localStorage.getItem('login'))|| [];
+          if(Login.length>10){
+               console.log('Reset lai arr')
+               localStorage.removeItem('login');
+          }
      })
 </script>

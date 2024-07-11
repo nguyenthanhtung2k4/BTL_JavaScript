@@ -41,19 +41,7 @@ function scrollFunction() {
     }
 }       
 /////////////////////////////////////////////////////////////////////
-//  check login
-function checkLogin(){
-    function link(){location.href='login.html'}
-    var user=JSON.parse(localStorage.getItem('dataUser'))||[];
-    console.log(user)
-    if(!user|| !user.status || user.length==0){
-        setTimeout(link,3000);
-        console.log('12343')
-    }else{
-        console.log('Login Succes');
-    }
-}
-checkLogin(); 
+
 //  Scroll animation
 document.addEventListener('DOMContentLoaded', function() {
     const animate = ScrollReveal({
@@ -69,3 +57,28 @@ document.addEventListener('DOMContentLoaded', function() {
     animate.reveal(".Pro,.blogs .news-item",{interval:150});
     animate.reveal(".Alltext-contact",{origin:"top"})
 });
+/////////////////////////////////////////////////////////////////////
+
+//  check login
+function checkLogin(){
+    var  Status=document.body.getAttribute('data-body')
+    function link(){location.href='login.html'}
+    function link2(){location.href='../login.html'}
+    var user=JSON.parse(localStorage.getItem('dataUser'))||[];
+    console.log(user)
+    if(!user|| !user.status || user.length==0){
+        //  check true  index.html
+        if(Status=='body'){
+            setTimeout(link,3000);
+        }else if(Status!='body'){
+            setTimeout(link,3000);
+        }else{
+            //   link  khac
+            setTimeout(link2,3000);    
+        }
+        console.log('12343')
+    }else{
+        console.log('Login Succes');
+    }
+}
+checkLogin(); 
